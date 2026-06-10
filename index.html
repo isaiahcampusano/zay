@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaiah Campusano</title>
+  <meta name="description" content="Econ student at UGA. Building tools that democratize financial literacy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======================== NAV ======================== -->
+  <nav id="top-nav">
+    <a href="#hero" class="nav-logo">IC</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="/assets/resume.pdf" class="btn-resume" download>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume
+      </a>
+    </div>
+  </nav>
+
+  <!-- ======================== HERO ======================== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-badges" data-animate>
+          <span class="badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            JPMC Intern
+          </span>
+          <span class="badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            ECON at University of Georgia
+          </span>
+        </div>
+
+        <h1 class="hero-name" data-animate data-delay="1">
+          Hi, I'm <span class="accent">Isaiah<br>Campusano</span>
+        </h1>
+
+        <p class="hero-role" data-animate data-delay="2">Builder</p>
+
+        <p class="hero-subtitle" data-animate data-delay="3">
+          Econ student at UGA with a focus on front-end development. Passionate about democratizing financial literacy through automating debt management and credit building.
+        </p>
+
+        <div class="hero-actions" data-animate data-delay="4">
+          <a href="#projects" class="btn btn-primary">View Projects →</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+
+        <div class="hero-meta" data-animate data-delay="5">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Atlanta, GA
+          </span>
+          <span class="dot">•</span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Expected Dec 2026
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ======================== EXPERIENCE ======================== -->
+    <section id="experience">
+      <div class="container">
+
+        <div class="section-eyebrow" data-animate>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Experience
+        </div>
+
+        <h2 class="section-heading" data-animate>Where I've Worked</h2>
+
+        <div class="experience-list">
+
+          <div class="exp-card" data-animate>
+            <div class="exp-card-top">
+              <div class="exp-accent" style="background: #3b82f6;"></div>
+              <div class="exp-header">
+                <div>
+                  <h3>JPMorgan Chase</h3>
+                  <p class="exp-role">Software Engineering Intern</p>
+                </div>
+                <span class="exp-date">Summer 2025</span>
+              </div>
+            </div>
+            <p class="exp-desc">Working on internal tooling and developer experience improvements across the consumer banking division. Building with React, TypeScript, and internal design systems.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">FinTech</span>
+            </div>
+          </div>
+
+          <div class="exp-card" data-animate>
+            <div class="exp-card-top">
+              <div class="exp-accent" style="background: #a855f7;"></div>
+              <div class="exp-header">
+                <div>
+                  <h3>University of Georgia</h3>
+                  <p class="exp-role">Economics Research Assistant</p>
+                </div>
+                <span class="exp-date">2024 – Present</span>
+              </div>
+            </div>
+            <p class="exp-desc">Assisting faculty with data analysis on household debt behavior and credit access across income brackets. Building models in Python and presenting findings to the economics department.</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Economics</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== PROJECTS ======================== -->
+    <section id="projects">
+      <div class="container">
+
+        <div class="section-eyebrow" data-animate>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Projects
+        </div>
+
+        <h2 class="section-heading" data-animate>Featured Work</h2>
+
+        <div class="project-grid">
+
+          <div class="project-card project-card--featured" data-animate>
+            <div class="project-card-accent" style="background: #3b82f6;"></div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="project-category">Product Design</span>
+                <span class="project-date">Dec 2024</span>
+              </div>
+              <h3><a href="#" class="project-link">Chase App Redesign</a></h3>
+              <p>Created a high-fidelity prototype with flatter navigation, clearer interaction flow, and reduced interface complexity. Focused on reducing time-to-action for core banking tasks.</p>
+              <div class="tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Product Design</span>
+                <span class="tag">UX Research</span>
+              </div>
+              <a href="#" class="read-more">View Project →</a>
+            </div>
+          </div>
+
+          <div class="project-card" data-animate>
+            <div class="project-card-accent" style="background: #f59e0b;"></div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="project-category">Web App</span>
+                <span class="project-date">Oct 2024</span>
+              </div>
+              <h3><a href="#" class="project-link">DebtFree Dashboard</a></h3>
+              <p>A personal finance tool that visualizes debt payoff timelines using the avalanche and snowball methods. Built to help young adults understand compounding interest visually.</p>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">FinTech</span>
+              </div>
+              <a href="#" class="read-more">View Project →</a>
+            </div>
+          </div>
+
+          <div class="project-card" data-animate>
+            <div class="project-card-accent" style="background: #10b981;"></div>
+            <div class="project-card-body">
+              <div class="project-meta">
+                <span class="project-category">Data</span>
+                <span class="project-date">Aug 2024</span>
+              </div>
+              <h3><a href="#" class="project-link">Credit Score Simulator</a></h3>
+              <p>An interactive model showing how different financial behaviors affect credit scores over time. Designed for financial literacy workshops at UGA.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">D3.js</span>
+                <span class="tag">Education</span>
+              </div>
+              <a href="#" class="read-more">View Project →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== BLOG ======================== -->
+    <section id="blog">
+      <div class="container">
+
+        <div class="section-eyebrow" data-animate>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Blog
+        </div>
+
+        <div class="blog-header" data-animate>
+          <div>
+            <h2 class="section-heading">Thoughts &amp; Insights</h2>
+            <p class="section-sub">Writing about finance, product, and things I'm learning.</p>
+          </div>
+        </div>
+
+        <div class="blog-grid">
+
+          <div class="blog-card" data-animate>
+            <div class="blog-card-accent" style="background: #3b82f6;"></div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Finance</span>
+                <span>Nov 2024</span>
+                <span>6 min read</span>
+              </div>
+              <h3><a href="#" class="project-link">Why 18-Year-Olds Don't Understand Credit (And How to Fix That)</a></h3>
+              <p>Breaking down the gap between financial education in schools and what young adults actually need to know to build credit from scratch.</p>
+              <div class="tags">
+                <span class="tag">Credit</span>
+                <span class="tag">Financial Literacy</span>
+              </div>
+              <a href="#" class="read-more">Read Article →</a>
+            </div>
+          </div>
+
+          <div class="blog-card" data-animate>
+            <div class="blog-card-accent" style="background: #f59e0b;"></div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Product</span>
+                <span>Oct 2024</span>
+                <span>5 min read</span>
+              </div>
+              <h3><a href="#" class="project-link">What the Chase App Gets Wrong About Simplicity</a></h3>
+              <p>A product teardown of one of the most-used banking apps in America — and why having fewer features isn't the same as being simple.</p>
+              <div class="tags">
+                <span class="tag">UX</span>
+                <span class="tag">Product Design</span>
+              </div>
+              <a href="#" class="read-more">Read Article →</a>
+            </div>
+          </div>
+
+          <div class="blog-card" data-animate>
+            <div class="blog-card-accent" style="background: #a855f7;"></div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-category">Learning</span>
+                <span>Sep 2024</span>
+                <span>4 min read</span>
+              </div>
+              <h3><a href="#" class="project-link">How I Learned to Code While Studying Economics Full-Time</a></h3>
+              <p>The system I built to make consistent progress on front-end development without sacrificing my GPA or social life.</p>
+              <div class="tags">
+                <span class="tag">Learning</span>
+                <span class="tag">Coding</span>
+              </div>
+              <a href="#" class="read-more">Read Article →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== CONTACT ======================== -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-inner" data-animate>
+
+          <div class="section-eyebrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Contact
+          </div>
+
+          <h2 class="section-heading">Let's Build Something</h2>
+          <p class="section-sub">Open to internships, collaborations, and conversations about finance + product. Best way to reach me is email.</p>
+
+          <div class="contact-links">
+            <a href="mailto:isaiah@example.com" class="contact-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              isaiah@example.com
+            </a>
+            <a href="https://linkedin.com/in/isaiahcampusano" target="_blank" class="contact-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/isaiahcampusano" target="_blank" class="contact-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="nav-logo">IC</span>
+        <p>© 2026 Isaiah Campusano. Built from scratch.</p>
+        <a href="#top-nav" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Theme toggle ──────────────────────────────────────────
+    const btn = document.getElementById('themeToggle');
+    const root = document.documentElement;
+
+    const saved = localStorage.getItem('theme') || 'dark';
+    root.setAttribute('data-theme', saved);
+
+    btn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // ── Scroll-triggered animations ───────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('[data-animate]').forEach((el, i) => {
+      const delay = el.dataset.delay || 0;
+      el.style.transitionDelay = `${delay * 0.08}s`;
+      observer.observe(el);
+    });
+
+    // ── Navbar shrink on scroll ───────────────────────────────
+    const nav = document.getElementById('top-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+    });
+  </script>
+
+</body>
+</html>
+
