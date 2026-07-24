@@ -1,353 +1,301 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Isaiah Campusano</title>
-  <meta name="description" content="Econ student at UGA. Building tools that democratize financial literacy.">
+  <meta
+    name="description"
+    content="Isaiah Campusano is a UGA student and product-minded builder focused on financial systems, clarity, and intelligent interfaces."
+  >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-shell">
+    <header class="site-header">
+      <nav id="top-nav" class="container" aria-label="Primary">
+        <a href="#hero" class="nav-logo" aria-label="Go to top">IC</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="mailto:inc67651@uga.edu" class="nav-cta">Email</a>
+      </nav>
+    </header>
 
-  <!-- ======================== NAV ======================== -->
-  <nav id="top-nav">
-    <a href="#hero" class="nav-logo">zay</a>
-    <ul>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
-        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      </button>
-      <a href="/assets/resume.pdf" class="btn-resume" download>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Resume
-      </a>
-    </div>
-  </nav>
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy" data-animate>
+              <div class="hero-badges">
+                <span class="badge">JPMorganChase | Summer 2025</span>
+                <span class="badge">UGA Economics</span>
+                <span class="badge">Atlanta, Georgia</span>
+              </div>
 
-  <!-- ======================== HERO ======================== -->
-  <section id="hero">
-    <div class="container">
-      <div class="hero-inner">
+              <p class="hero-kicker">Product-minded builder</p>
+              <h1 class="hero-name">Isaiah Campusano</h1>
+              <p class="hero-role">Financial systems, clarity, and intelligent interfaces.</p>
+              <p class="hero-summary">
+                I am an Economics student at the University of Georgia who spent Summer 2025 at JPMorganChase working on product operations.
+                I like building calmer tools around money and systems so complex decisions feel easier to navigate.
+              </p>
 
-        <div class="hero-badges" data-animate>
-          <span class="badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            JPMorganChase Summer Analyst
-          </span>
-          <span class="badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            Economics University of Georgia 
-          </span>
+              <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">Selected work</a>
+                <a href="#contact" class="btn btn-secondary">Say hello</a>
+              </div>
+
+              <div class="hero-meta" aria-label="Quick facts">
+                <span>Expected Dec 2026</span>
+                <span class="meta-divider"></span>
+                <span>Interested in product, operations, and builder roles</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <h1 class="hero-name" data-animate data-delay="1">
-          Hi, I'm <span class="accent">Isaiah<br>Campusano</span>
-        </h1>
+      <section id="about" class="content-section">
+        <div class="container section-grid">
+          <div class="section-intro" data-animate>
+            <p class="section-eyebrow">About</p>
+            <h2 class="section-heading">I like making complicated systems feel legible.</h2>
+          </div>
 
-        <p class="hero-role" data-animate data-delay="2">isaiah.md</p>
+          <div class="section-body about-stack" data-animate>
+            <p class="section-copy">
+              My work sits between product thinking, operations, and interface design. I am most energized by problems where the underlying
+              system is messy, high-stakes, or hard to explain, especially in finance. I like finding the friction, mapping the decision flow,
+              and building something people can actually trust and use.
+            </p>
 
-        <p class="hero-subtitle" data-animate data-delay="3">
-           Student at UGA with a focus on front-end development. Passionate about democratizing financial literacy through automating debt management.
-        </p>
-
-        <div class="hero-actions" data-animate data-delay="4">
-          <a href="#projects" class="btn btn-primary">View Projects →</a>
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <div class="about-points">
+              <article class="about-card">
+                <h3>What I build</h3>
+                <p>Prototypes, workflows, and decision-support interfaces that turn dense systems into cleaner experiences.</p>
+              </article>
+              <article class="about-card">
+                <h3>How I think</h3>
+                <p>I start with constraints, user confusion, and process breakdowns before deciding what the product should do.</p>
+              </article>
+              <article class="about-card">
+                <h3>Why finance</h3>
+                <p>Financial products shape real decisions, and I care about making those tools clearer, fairer, and easier to act on.</p>
+              </article>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="hero-meta" data-animate data-delay="5">
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Atlanta, GA
-          </span>
-          <span class="dot">•</span>
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            Expected Dec 2026
-          </span>
+      <section id="experience" class="content-section">
+        <div class="container section-grid">
+          <div class="section-intro" data-animate>
+            <p class="section-eyebrow">Experience</p>
+            <h2 class="section-heading">Work that sharpened how I think about systems.</h2>
+          </div>
+
+          <div class="section-body experience-list">
+            <article class="exp-card" data-animate>
+              <div class="card-topline">
+                <p class="card-label">JPMorganChase</p>
+                <p class="card-date">Summer 2025</p>
+              </div>
+              <h3>Product Operations Analyst</h3>
+              <ul class="detail-list">
+                <li>Improved existing Jira Align automations across more than 10 credit card product teams by identifying definition-of-done mismatches and process gaps.</li>
+                <li>Worked close to cross-functional stakeholders to make delivery signals cleaner, coordination easier, and reporting more reliable.</li>
+              </ul>
+              <div class="tag-row" aria-label="Skills used">
+                <span class="tag">Jira Align</span>
+                <span class="tag">Agile Delivery</span>
+                <span class="tag">Process Improvement</span>
+              </div>
+            </article>
+
+            <article class="exp-card" data-animate>
+              <div class="card-topline">
+                <p class="card-label">Georgia Tech ISyE</p>
+                <p class="card-date">Summer 2024</p>
+              </div>
+              <h3>Undergraduate Research Assistant</h3>
+              <ul class="detail-list">
+                <li>Studied transportation barriers affecting underserved riders in the MARTA Reach multimodal mobility pilot.</li>
+                <li>Used systems thinking and analysis to connect rider behavior, access constraints, and service design choices to real mobility outcomes.</li>
+              </ul>
+              <div class="tag-row" aria-label="Skills used">
+                <span class="tag">Systems Analysis</span>
+                <span class="tag">Mobility Research</span>
+                <span class="tag">Service Design</span>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
+      <section id="projects" class="content-section">
+        <div class="container section-grid">
+          <div class="section-intro" data-animate>
+            <p class="section-eyebrow">Selected Work</p>
+            <h2 class="section-heading">Projects where I tried to make decisions easier.</h2>
+          </div>
 
-  <main>
-
-    <!-- ======================== EXPERIENCE ======================== -->
-    <section id="experience">
-      <div class="container">
-
-        <div class="section-eyebrow" data-animate>
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-          Experience
-        </div>
-
-        <h2 class="section-heading" data-animate>Where I've Worked</h2>
-
-        <div class="experience-list">
-
-          <div class="exp-card" data-animate>
-            <div class="exp-card-top">
-              <div class="exp-accent" style="background: #3b82f6;"></div>
-              <div class="exp-header">
+          <div class="section-body project-stack">
+            <article class="project-card project-card-featured" data-animate>
+              <div class="card-topline">
+                <p class="card-label">Featured Project</p>
+                <p class="card-date">August 2025</p>
+              </div>
+              <h3>Chase Bank App Prototype</h3>
+              <p class="project-summary">
+                A front-end-only banking prototype built to test whether simpler navigation and cleaner flows can reduce friction in everyday money tasks.
+              </p>
+              <div class="project-breakdown">
                 <div>
-                  <h3>JPMorganChase</h3>
-                  <p class="exp-role">Product Operations Analyst</p>
+                  <span class="breakdown-label">Problem</span>
+                  <p>Mobile banking interfaces often bury important actions behind crowded navigation and habit-based patterns.</p>
                 </div>
-                <span class="exp-date">Summer 2025</span>
-              </div>
-            </div>
-            <p class="exp-desc">Scaled existing jira automations through DoD misalignment across 10+ credit card product team.</p>
-            <div class="tags">
-              <span class="tag">Jira Align</span>
-              <span class="tag">Agile/Scrum</span>
-            </div>
-          </div>
-
-          <div class="exp-card" data-animate>
-            <div class="exp-card-top">
-              <div class="exp-accent" style="background: #a855f7;"></div>
-              <div class="exp-header">
                 <div>
-                  <h3>Georgia Tech ISyE</h3>
-                  <p class="exp-role">Undergraduate Research Assistant</p>
+                  <span class="breakdown-label">What I built</span>
+                  <p>Two UX conditions, current versus simplified, using Vite, vanilla JavaScript, and CSS to compare navigation and interaction choices.</p>
                 </div>
-                <span class="exp-date">Summer 2024</span>
+                <div>
+                  <span class="breakdown-label">Why it matters</span>
+                  <p>The project helped me explore how product clarity can change confidence, speed, and decision-making in financial tools.</p>
+                </div>
               </div>
-            </div>
-            <p class="exp-desc">Researched transportation barriers affecting underserved riders though the MARTA Reach multimodal mobility pilot.</p>
-            <div class="tags">
-              <span class="tag">System Analysis</span>
-              <span class="tag">Financial Modeling</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== PROJECTS ======================== -->
-    <section id="projects">
-  <div class="container">
-
-    <div class="section-eyebrow" data-animate>
-      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-      Projects
-    </div>
-
-    <h2 class="section-heading" data-animate>Featured Work</h2>
-
-    <div class="project-grid">
-
-      <!-- Chase Bank Project -->
-      <div class="project-card project-card--featured" data-animate>
-        <div class="project-card-accent" style="background: #3b82f6;"></div>
-        <div class="project-card-body">
-          <div class="project-meta">
-            <span class="project-category">Product Design</span>
-            <span class="project-date">August 2025</span>
-          </div>
-          <h3><a href="https://github.com/isaiahcampusano/chasemobile" class="project-link" target="_blank">Chase Bank App</a></h3>
-          <p>An unofficial, front-end-only mobile banking prototype with two UX test conditions (Current vs. Simple). Built with Vite, vanilla JS, and CSS to demonstrate improved navigation and interaction flows.</p>
-          <div class="tags">
-            <span class="tag">Vite</span>
-            <span class="tag">Prototyping</span>
-            <span class="tag">UX Research</span>
-          </div>
-          <a href="https://github.com/isaiahcampusano/chasemobile" class="read-more" target="_blank">View on Github →</a>
-        </div>
-      </div>
-
-      <!-- Chess Project -->
-      <div class="project-card" data-animate>
-        <div class="project-card-accent" style="background: #10b981;"></div>
-        <div class="project-card-body">
-          <div class="project-meta">
-            <span class="project-category">Data</span>
-            <span class="project-date">Aug 2024</span>
-          </div>
-          <h3><a href="https://github.com/isaihcampusano/chess-engine" class="project-link" target="_blank">Chess Engine</a></h3>
-          <p>Developed chess board rendering and piece movement with advanced rules and legal-move validation using minimax AI.</p>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Minimax AI</span>
-            <span class="tag">Game Logic</span>
-          </div>
-          <a href="https://github.com/isaihcampusano/chess-engine" class="read-more" target="_blank">View on GitHub →</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <!-- ======================== BLOG ======================== -->
-    <section id="blog">
-      <div class="container">
-
-        <div class="section-eyebrow" data-animate>
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          dawg w/ a blog
-        </div>
-
-        <div class="blog-header" data-animate>
-          <div>
-            <h2 class="section-heading">Thoughts &amp; Reflections</h2>
-            <p class="section-sub"></p>
-          </div>
-        </div>
-
-        <div class="blog-grid">
-
-          <div class="blog-card" data-animate>
-            <div class="blog-card-accent" style="background: #3b82f6;"></div>
-            <div class="blog-card-body">
-              <div class="blog-meta">
-                <span class="blog-category">Tech</span>
-                <span>Apr 2026</span>
-                <span>6 min read</span>
+              <div class="project-footer">
+                <div class="tag-row">
+                  <span class="tag">Vite</span>
+                  <span class="tag">Interaction Design</span>
+                  <span class="tag">UX Research</span>
+                </div>
+                <a href="https://github.com/isaiahcampusano/chasemobile" class="text-link" target="_blank" rel="noreferrer">View project</a>
               </div>
-              <h3><a href="#" class="project-link">JEPA vs. Reinforcement Learning: </a></h3>
-              <p> Imagine two basketball players trying to understand the game. 
-                JEPA learns a model of how "the game" unfolds by observing possessions. LLM's reinforcement learning steps into the court, takes action, but maximizes reward for each individual possession.</p>
-              <div class="tags">
+            </article>
+
+            <article class="project-card" data-animate>
+              <div class="card-topline">
+                <p class="card-label">Technical Build</p>
+                <p class="card-date">August 2024</p>
+              </div>
+              <h3>Chess Engine</h3>
+              <p class="project-summary">
+                A rules-heavy build focused on board rendering, legal move validation, and search logic.
+              </p>
+              <div class="project-breakdown">
+                <div>
+                  <span class="breakdown-label">Problem</span>
+                  <p>Chess looks simple at the surface, but every useful move depends on hidden rules, edge cases, and state changes.</p>
+                </div>
+                <div>
+                  <span class="breakdown-label">What I built</span>
+                  <p>A Python-based engine with move generation, piece logic, special-rule handling, and a minimax decision layer.</p>
+                </div>
+                <div>
+                  <span class="breakdown-label">Why it matters</span>
+                  <p>It sharpened my ability to model complex logic clearly, test edge cases, and structure decision-making in code.</p>
+                </div>
+              </div>
+              <div class="project-footer">
+                <div class="tag-row">
+                  <span class="tag">Python</span>
+                  <span class="tag">Minimax</span>
+                  <span class="tag">Game Logic</span>
+                </div>
+                <a href="https://github.com/isaiahcampusano/chess-engine" class="text-link" target="_blank" rel="noreferrer">View project</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="writing" class="content-section">
+        <div class="container section-grid">
+          <div class="section-intro" data-animate>
+            <p class="section-eyebrow">Writing</p>
+            <h2 class="section-heading">One note on learning systems by modeling them.</h2>
+          </div>
+
+          <div class="section-body" data-animate>
+            <article class="writing-feature">
+              <div class="card-topline">
+                <p class="card-label">Notes</p>
+                <p class="card-date">April 2026</p>
+              </div>
+              <h3>JEPA vs. Reinforcement Learning</h3>
+              <p class="writing-summary">
+                A short piece comparing two ways machines learn: modeling how a world unfolds versus learning through action and reward. The throughline
+                is the kind of question I keep coming back to: when do we understand a system by observing it, and when do we understand it by intervening?
+              </p>
+              <div class="tag-row">
                 <span class="tag">Machine Learning</span>
                 <span class="tag">World Models</span>
+                <span class="tag">Learning Systems</span>
               </div>
-              <a href="#" class="read-more">Read More →</a>
-            </div>
+            </article>
           </div>
-
-          <div class="blog-card" data-animate>
-            <div class="blog-card-accent" style="background: #f59e0b;"></div>
-            <div class="blog-card-body">
-              <div class="blog-meta">
-                <span class="blog-category">Finance</span>
-                <span>May 2026</span>
-                <span>5 min read</span>
-              </div>
-              <h3><a href="#" class="project-link">Chip off my shoulde</a></h3>
-              <p> Most AI infrastructure connects thousands of smaller processors. Cerebras's unique circular silion wafer cam keep the computation, memory, and communication together. On the first day CRBS stock shot up to 200% its first day. </p>
-              <div class="tags">
-                <span class="tag">AI Infrastructure</span>
-                <span class="tag">Semiconductors</span>
-              </div>
-              <a href="#" class="read-more">Read Article →</a>
-            </div>
-          </div>
-
-          <div class="blog-card" data-animate>
-            <div class="blog-card-accent" style="background: #a855f7;"></div>
-            <div class="blog-card-body">
-              <div class="blog-meta">
-                <span class="blog-category">Reflections</span>
-                <span>June 2026</span>
-                <span>4 min read</span>
-              </div>
-              <h3><a href="#" class="project-link">Building a startup is _. </a></h3>
-              <p>extremely hard - jensen huang</p>
-              <div class="tags">
-                <span class="tag">404</span>
-                <span class="tag">404</span>
-              </div>
-              <a href="#" class="read-more">Read Article →</a>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ======================== CONTACT ======================== -->
-    <section id="contact">
-      <div class="container">
-        <div class="contact-inner" data-animate>
-
-          <div class="section-eyebrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Contact
+      <section id="contact" class="content-section">
+        <div class="container section-grid">
+          <div class="section-intro" data-animate>
+            <p class="section-eyebrow">Contact</p>
+            <h2 class="section-heading">If the problem is messy, I am interested.</h2>
           </div>
 
-          <h2 class="section-heading">Let's Ship Something</h2>
-          <p class="section-sub">Open to collaborations.</p>
-
-          <div class="contact-links">
-            <a href="mailto:inc67651@uga.edu" class="contact-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Email
-            </a>
-            <a href="https://www.linkedin.com/in/isaiah-campusano-802535266/" target="_blank" class="contact-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              LinkedIn
-            </a>
-            <a href="https://github.com/isaiahcampusano" target="_blank" class="contact-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              Git
-            </a>
+          <div class="section-body contact-stack" data-animate>
+            <p class="section-copy">
+              I am open to conversations about product, operations, research, and building clearer experiences inside complex systems.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:inc67651@uga.edu" class="contact-link">Email</a>
+              <a href="https://www.linkedin.com/in/isaiah-campusano-802535266/" target="_blank" rel="noreferrer" class="contact-link">LinkedIn</a>
+              <a href="https://github.com/isaiahcampusano" target="_blank" rel="noreferrer" class="contact-link">GitHub</a>
+            </div>
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <span class="nav-logo">isaiah</span>
-        <p>© 2026 Isaiah Campusano. All rights reserved. </p>
-        <a href="#top-nav" class="back-to-top">Back to top ↑</a>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="nav-logo">Isaiah Campusano</span>
+        <p>Built as a tighter, clearer snapshot of how I think and what I build.</p>
+        <a href="#hero" class="text-link">Back to top</a>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script>
-    // ── Theme toggle ──────────────────────────────────────────
-    const btn = document.getElementById('themeToggle');
-    const root = document.documentElement;
+    const nav = document.getElementById("top-nav");
+    const animated = document.querySelectorAll("[data-animate]");
 
-    const saved = localStorage.getItem('theme') || 'dark';
-    root.setAttribute('data-theme', saved);
-
-    btn.addEventListener('click', () => {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-
-    // ── Scroll-triggered animations ───────────────────────────
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
+          entry.target.classList.add("in-view");
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.15 });
 
-    document.querySelectorAll('[data-animate]').forEach((el, i) => {
-      const delay = el.dataset.delay || 0;
-      el.style.transitionDelay = `${delay * 0.08}s`;
-      observer.observe(el);
-    });
+    animated.forEach((element) => observer.observe(element));
 
-    // ── Navbar shrink on scroll ───────────────────────────────
-    const nav = document.getElementById('top-nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("nav-scrolled", window.scrollY > 24);
     });
   </script>
-
 </body>
 </html>
-
