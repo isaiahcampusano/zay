@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="style.css?v=20260725-hero-refresh">
+  <link rel="stylesheet" href="style.css?v=20260725-motion-cards">
 </head>
 <body>
   <div class="page-shell">
@@ -87,46 +87,49 @@
 
       <section id="experience" class="content-section">
         <div class="container section-stack">
-          <div class="section-intro" data-animate>
+          <div class="section-intro" data-animate="heading">
             <p class="section-label">Experience</p>
             <h2>Where I've Worked</h2>
           </div>
 
           <div class="experience-list">
-            <article class="list-card" data-animate>
-              <div class="card-header">
-                <div>
-                  <h3>JPMorganChase</h3>
-                  <p class="card-role">Analyst</p>
-                </div>
-                <p class="card-date">Summer 2025</p>
+            <article
+              class="experience-card motion-card"
+              data-animate="experience-card"
+              data-tilt
+              style="--stagger: 0ms; --card-accent: #7aa2ff;"
+            >
+              <div class="experience-visual" aria-hidden="true">
+                <span class="orbit-ring"></span>
+                <span class="orbit-dot"></span>
               </div>
-              <p class="card-copy">
-                Improved existing Jira Align automations across more than 10 credit card product teams by identifying process gaps and definition-of-done misalignment.
-              </p>
-              <div class="tag-row" aria-label="Skills used">
-                <span class="tag">Jira Align</span>
-                <span class="tag">Agile</span>
-                <span class="tag">Process Design</span>
-              </div>
+              <h3>JPMorganChase</h3>
             </article>
 
-            <article class="list-card" data-animate>
-              <div class="card-header">
-                <div>
-                  <h3>Georgia Tech ISyE</h3>
-                  <p class="card-role">Undergraduate Research Assistant</p>
-                </div>
-                <p class="card-date">Summer 2024</p>
+            <article
+              class="experience-card motion-card"
+              data-animate="experience-card"
+              data-tilt
+              style="--stagger: 110ms; --card-accent: #4bc0cb;"
+            >
+              <div class="experience-visual" aria-hidden="true">
+                <span class="orbit-ring"></span>
+                <span class="orbit-dot"></span>
               </div>
-              <p class="card-copy">
-                Researched transportation barriers affecting underserved riders through the MARTA Reach multimodal mobility pilot.
-              </p>
-              <div class="tag-row" aria-label="Skills used">
-                <span class="tag">Systems Analysis</span>
-                <span class="tag">Research</span>
-                <span class="tag">Modeling</span>
+              <h3>Georgia Tech ISyE</h3>
+            </article>
+
+            <article
+              class="experience-card motion-card"
+              data-animate="experience-card"
+              data-tilt
+              style="--stagger: 220ms; --card-accent: #f1b36b;"
+            >
+              <div class="experience-visual" aria-hidden="true">
+                <span class="orbit-ring"></span>
+                <span class="orbit-dot"></span>
               </div>
+              <h3>UGA</h3>
             </article>
           </div>
         </div>
@@ -134,13 +137,17 @@
 
       <section id="projects" class="content-section">
         <div class="container section-stack">
-          <div class="section-intro" data-animate>
+          <div class="section-intro" data-animate="heading">
             <p class="section-label">Projects</p>
             <h2>Featured Work</h2>
           </div>
 
           <div class="project-list">
-            <article class="list-card featured-project" data-animate>
+            <article
+              class="list-card project-card featured-project motion-card"
+              data-animate="project-primary"
+              data-tilt
+            >
               <div class="card-meta">
                 <span>Product Design</span>
                 <span>August 2025</span>
@@ -168,7 +175,12 @@
               </div>
             </article>
 
-            <article class="list-card" data-animate>
+            <article
+              class="list-card project-card motion-card"
+              data-animate="project-secondary"
+              data-tilt
+              style="--stagger: 120ms;"
+            >
               <div class="card-meta">
                 <span>Game Dev</span>
                 <span>August 2024</span>
@@ -190,13 +202,13 @@
 
       <section id="writing" class="content-section">
         <div class="container section-stack">
-          <div class="section-intro" data-animate>
+          <div class="section-intro" data-animate="heading">
             <p class="section-label">Thoughts & Reflections</p>
             <h2>Dawg W/ A Blog</h2>
           </div>
 
           <div class="writing-list">
-            <article class="list-card" data-animate>
+            <article class="list-card writing-card motion-card" data-animate="project-primary" data-tilt>
               <div class="card-meta">
                 <span>Tech</span>
                 <span>April 2026</span>
@@ -213,18 +225,21 @@
 
       <section id="contact" class="content-section">
         <div class="container section-stack">
-          <div class="section-intro" data-animate>
+          <div class="section-intro" data-animate="heading">
             <p class="section-label">Contact</p>
             <h2>Let's Ship Something</h2>
           </div>
 
-          <div class="contact-panel" data-animate>
+          <div class="contact-panel connection-panel" data-animate="contact">
+            <div class="connection-orbit" aria-hidden="true">
+              <span></span>
+            </div>
             <p class="card-copy">Open to collaborations and conversations around product, operations, and building clearer experiences inside complex systems.</p>
             <div class="contact-links">
-              <a href="mailto:inc67651@uga.edu" class="contact-link">Email</a>
-              <a href="assets/Isaiah-Campusano-Resume.pdf" target="_blank" rel="noreferrer" class="contact-link">Resume</a>
-              <a href="https://www.linkedin.com/in/isaiah-campusano-802535266/" target="_blank" rel="noreferrer" class="contact-link">LinkedIn</a>
-              <a href="https://github.com/isaiahcampusano" target="_blank" rel="noreferrer" class="contact-link">GitHub</a>
+              <a href="mailto:inc67651@uga.edu" class="contact-link" style="--link-index: 0;">Email</a>
+              <a href="assets/Isaiah-Campusano-Resume.pdf" target="_blank" rel="noreferrer" class="contact-link" style="--link-index: 1;">Resume</a>
+              <a href="https://www.linkedin.com/in/isaiah-campusano-802535266/" target="_blank" rel="noreferrer" class="contact-link" style="--link-index: 2;">LinkedIn</a>
+              <a href="https://github.com/isaiahcampusano" target="_blank" rel="noreferrer" class="contact-link" style="--link-index: 3;">GitHub</a>
             </div>
           </div>
         </div>
@@ -245,6 +260,7 @@
     const heroPortrait = document.getElementById("hero-portrait");
     const animated = document.querySelectorAll("[data-animate]");
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const supportsFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 
     const setHeroStage = (stage) => {
       if (hero) {
@@ -277,6 +293,26 @@
     }, { threshold: 0.15 });
 
     animated.forEach((element) => observer.observe(element));
+
+    if (!prefersReducedMotion.matches && supportsFinePointer.matches) {
+      document.querySelectorAll("[data-tilt]").forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+          const bounds = card.getBoundingClientRect();
+          const x = (event.clientX - bounds.left) / bounds.width;
+          const y = (event.clientY - bounds.top) / bounds.height;
+
+          card.style.setProperty("--spot-x", `${x * 100}%`);
+          card.style.setProperty("--spot-y", `${y * 100}%`);
+          card.style.setProperty("--tilt-x", `${(0.5 - y) * 4}deg`);
+          card.style.setProperty("--tilt-y", `${(x - 0.5) * 5}deg`);
+        });
+
+        card.addEventListener("pointerleave", () => {
+          card.style.setProperty("--tilt-x", "0deg");
+          card.style.setProperty("--tilt-y", "0deg");
+        });
+      });
+    }
 
     window.addEventListener("scroll", () => {
       nav.classList.toggle("nav-scrolled", window.scrollY > 24);
