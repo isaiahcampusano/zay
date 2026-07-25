@@ -230,13 +230,17 @@ select {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
   gap: 3rem;
-  align-items: center;
+  align-items: start;
+  align-content: start;
+  padding-top: clamp(4rem, 10vh, 6rem);
 }
 
 .hero-copy {
   display: grid;
-  gap: 1.35rem;
+  gap: 1.1rem;
   max-width: 560px;
+  padding-left: 1.15rem;
+  border-left: 1px solid rgba(122, 162, 255, 0.3);
 }
 
 .hero-title {
@@ -263,14 +267,15 @@ select {
 }
 
 .hero-summary {
-  max-width: 28ch;
-  color: rgba(255, 255, 255, 0.62);
-  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  max-width: 24ch;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: clamp(1rem, 2vw, 1.12rem);
   line-height: 1.45;
+  text-wrap: balance;
 }
 
 .hero-marquee {
-  width: min(100%, 34rem);
+  width: min(100%, 31rem);
   overflow: hidden;
   mask-image: linear-gradient(90deg, transparent 0, #000 10%, #000 90%, transparent 100%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 10%, #000 90%, transparent 100%);
@@ -303,7 +308,7 @@ select {
   background: rgba(255, 255, 255, 0.02);
   color: rgba(244, 246, 250, 0.86);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   white-space: nowrap;
 }
 
@@ -503,11 +508,12 @@ select {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 5rem 0 2rem;
+    padding: 4.25rem 0 2rem;
   }
 
   .hero-copy {
     max-width: 100%;
+    padding-left: 1rem;
   }
 
   .hero-portrait-frame {
@@ -548,8 +554,8 @@ select {
   }
 
   .hero-summary {
-    max-width: 22ch;
-    font-size: 1rem;
+    max-width: 24ch;
+    font-size: 0.98rem;
   }
 
   .hero-marquee {
