@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="style.css?v=20260724">
+  <link rel="stylesheet" href="style.css?v=20260724-hero">
 </head>
 <body>
   <div class="page-shell">
@@ -32,32 +32,55 @@
     </header>
 
     <main>
-      <section id="hero" class="hero-section">
+      <section id="hero" class="hero-section" data-stage="final">
         <div class="container hero-shell">
-          <div class="hero-status" data-animate>
-            <span>JPMorganChase Summer Analyst</span>
-            <span>Mathematics</span>
-            <span>University of Georgia</span>
+          <div class="hero-intro" aria-hidden="true">
+            <p class="hero-intro-line hero-intro-hey">Hey there!</p>
+            <p class="hero-intro-line hero-intro-name">I'm Isaiah,</p>
           </div>
 
-          <div class="hero-grid">
-            <div class="hero-copy" data-animate>
-              <h1 class="hero-title">Hi, I'm Isaiah</h1>
-              <p class="hero-file">isaiah.md</p>
-              <p class="hero-summary">
-                Student at UGA.
-              </p>
+          <div class="hero-final" aria-label="Introduction">
+            <div class="hero-grid">
+              <div class="hero-copy">
+                <h1 class="hero-title">I'm Isaiah,</h1>
+                <p class="hero-summary">
+                  Student builder focused on financial systems, product thinking, and clear interfaces.
+                </p>
+                <div class="hero-marquee" aria-label="Tools and frameworks I use">
+                  <div class="hero-marquee-track">
+                    <div class="hero-marquee-group" aria-hidden="false">
+                      <span class="hero-tool">JavaScript</span>
+                      <span class="hero-tool">HTML/CSS</span>
+                      <span class="hero-tool">Python</span>
+                      <span class="hero-tool">Vite</span>
+                      <span class="hero-tool">Git</span>
+                      <span class="hero-tool">UX Research</span>
+                      <span class="hero-tool">Prototyping</span>
+                    </div>
+                    <div class="hero-marquee-group" aria-hidden="true">
+                      <span class="hero-tool">JavaScript</span>
+                      <span class="hero-tool">HTML/CSS</span>
+                      <span class="hero-tool">Python</span>
+                      <span class="hero-tool">Vite</span>
+                      <span class="hero-tool">Git</span>
+                      <span class="hero-tool">UX Research</span>
+                      <span class="hero-tool">Prototyping</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+              <div class="hero-portrait-frame" id="hero-portrait-frame">
+                <img
+                  id="hero-portrait"
+                  class="hero-portrait"
+                  src="assets/headshot.jpg"
+                  alt="Portrait of Isaiah Campusano"
+                  loading="eager"
+                  decoding="async"
+                >
               </div>
             </div>
-
-            <aside class="hero-aside" data-animate aria-label="Quick details">
-              <p>Atlanta, GA</p>
-              <p>Expected May 2027</p>
-            </aside>
           </div>
         </div>
       </section>
@@ -133,14 +156,14 @@
               </div>
               <div class="project-actions">
                 <a
-  href="https://isaiahcampusano.github.io/chasemobile/docs/"
-  class="text-link"
-  target="_blank"
-  rel="noreferrer"
-  onclick="event.stopPropagation();"
->
-  Open Prototype
-</a>
+                  href="https://isaiahcampusano.github.io/chasemobile/docs/"
+                  class="text-link"
+                  target="_blank"
+                  rel="noreferrer"
+                  onclick="event.stopPropagation();"
+                >
+                  Open Prototype
+                </a>
                 <a href="https://github.com/isaiahcampusano/chasemobile" class="text-link" target="_blank" rel="noreferrer">View on GitHub</a>
               </div>
             </article>
@@ -218,7 +241,31 @@
 
   <script>
     const nav = document.getElementById("top-nav");
+    const hero = document.getElementById("hero");
+    const heroPortrait = document.getElementById("hero-portrait");
     const animated = document.querySelectorAll("[data-animate]");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const setHeroStage = (stage) => {
+      if (hero) {
+        hero.dataset.stage = stage;
+      }
+    };
+
+    if (heroPortrait) {
+      heroPortrait.addEventListener("error", () => {
+        hero.classList.add("no-portrait");
+        document.getElementById("hero-portrait-frame")?.setAttribute("hidden", "hidden");
+      });
+    }
+
+    if (hero && !prefersReducedMotion.matches) {
+      hero.classList.add("hero-sequenced");
+      setHeroStage("intro-1");
+
+      window.setTimeout(() => setHeroStage("intro-2"), 850);
+      window.setTimeout(() => setHeroStage("final"), 1950);
+    }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
