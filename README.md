@@ -1,7 +1,7 @@
 # Portfolio
 
-Personal portfolio 
+Personal portfolio site for Isaiah Campusano, focused on product thinking, financial systems, and clear interface design.
 
 Live: https://isaiahcampusano.github.io/zay/
 
-Built with HTML and CSS.
+Built with plain HTML and CSS.
