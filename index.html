@@ -85,70 +85,185 @@
         </div>
       </section>
 
-      <section id="experience" class="content-section">
-        <div class="container section-stack">
-          <div class="section-intro" data-animate="heading">
-            <p class="section-label">Experience</p>
-            <h2>Where I've Worked</h2>
-          </div>
+     <!-- ======================== EXPERIENCE ======================== -->
+<section id="experience">
+  <div class="container">
 
-          <div class="experience-timeline">
-            <!-- Vertical Connecting Line -->
-            <div class="timeline-line" data-animate="line"></div>
+    <div class="section-eyebrow" data-animate>
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      Experience
+    </div>
 
-            <!-- Item 1 -->
-            <div class="timeline-item" data-animate="timeline-item" style="--stagger: 0ms; --card-accent: #ff9900;">
-              <div class="timeline-dot"></div>
-              <article class="experience-card motion-card" data-tilt>
-                <div class="card-header">
-                  <div class="company-logo" style="background: #ff9900; color: #0f0f0f;">AWS</div>
-                  <div class="company-info">
-                    <h3>Amazon Web Services</h3>
-                    <p class="card-role">Software Development Engineer Intern</p>
-                    <p class="card-meta">Palo Alto, CA • May 2025 - Aug 2025</p>
-                  </div>
-                </div>
-                <ul class="card-bullets">
-                  <li>Built an automation tool to streamline AWS on-call support, cutting resolution time from 6 hours to minutes</li>
-                  <li>Designed a distributed observability dashboard monitoring 250+ data streams with 30% faster root-cause analysis</li>
-                  <li>Outlined comprehensive design doc comparing 3 solutions with tradeoffs and architectural diagrams</li>
-                </ul>
-                <div class="tag-row">
-                  <span class="tag">Lambda</span>
-                  <span class="tag">CDK</span>
-                  <span class="tag">AppConfig</span>
-                  <span class="tag">TypeScript</span>
-                </div>
-              </article>
+    <h2 class="section-heading" data-animate>Where I've Worked</h2>
+
+    <div class="experience-list">
+
+      <!-- JPMorganChase - Jira Automations -->
+      <div class="exp-card" data-animate>
+        <div class="exp-card-top">
+          <div class="exp-accent" style="background: #3b82f6;"></div>
+          <div class="exp-header">
+            <div>
+              <h3>JPMorganChase</h3>
+              <p class="exp-role">Product Operations Analyst</p>
             </div>
-
-            <!-- Item 2 -->
-            <div class="timeline-item" data-animate="timeline-item" style="--stagger: 110ms; --card-accent: #0056D2;">
-              <div class="timeline-dot"></div>
-              <article class="experience-card motion-card" data-tilt>
-                <div class="card-header">
-                  <div class="company-logo" style="background: #0056D2; color: #ffffff;">MK</div>
-                  <div class="company-info">
-                    <h3>McKenney's</h3>
-                    <p class="card-role">Software Engineer Intern</p>
-                    <p class="card-meta">Atlanta, GA • May 2024 - Aug 2024</p>
-                  </div>
-                </div>
-                <ul class="card-bullets">
-                  <li>Built and deployed 3 automation pipelines in Python and SQL, boosting team efficiency by 50%</li>
-                  <li>Developed Pandas and Google Analytics API scripts to improve financial reporting by 25%</li>
-                  <li>Led knowledge base preprocessing for RAG using modern NLP vectorization techniques</li>
-                </ul>
-                <div class="tag-row">
-                  <span class="tag">Python</span>
-                  <span class="tag">SQL</span>
-                  <span class="tag">Pandas</span>
-                </div>
-              </article>
-            </div>
+            <span class="exp-date">Summer 2025</span>
           </div>
         </div>
-      </section>
+
+        <!-- Problem -->
+        <div class="exp-section">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Problem
+          </div>
+          <p class="exp-text">Sprint updates and blocker escalation across 10+ card product teams depended heavily on manual board checks and inconsistent communication. A blocker escalation firing at 5pm EST hits a London stakeholder at 10pm — by morning, the context is stale. Different squads defining "done" differently meant DoD checks fired at different moments, making data incomparable across teams.</p>
+        </div>
+
+        <!-- Approach -->
+        <div class="exp-section">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            Approach
+          </div>
+          <p class="exp-text">Built Jira-integrated automation workflows that triggered real-time notifications for ticket events, blockers, and sprint-state changes across the product organization.</p>
+        </div>
+
+        <!-- Results -->
+        <div class="exp-section">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Results
+          </div>
+          <p class="exp-text">Reduced manual workflow overhead, accelerated blocker visibility, and improved sprint coordination across multiple card product squads.</p>
+        </div>
+
+        <!-- Learnings -->
+        <div class="exp-section exp-learning">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Key Learning
+          </div>
+          <p class="exp-text exp-learning-text">"Automation is most valuable when it removes coordination friction, not just repetitive clicks."</p>
+        </div>
+
+        <div class="tags">
+          <span class="tag">Jira Align</span>
+          <span class="tag">Automation</span>
+          <span class="tag">Agile/Scrum</span>
+          <span class="tag">Process Optimization</span>
+        </div>
+      </div>
+
+      <!-- JPMorganChase - Audit Efficiency -->
+      <div class="exp-card" data-animate>
+        <div class="exp-card-top">
+          <div class="exp-accent" style="background: #8b5cf6;"></div>
+          <div class="exp-header">
+            <div>
+              <h3>JPMorganChase</h3>
+              <p class="exp-role">Audit Operations Intern</p>
+            </div>
+            <span class="exp-date">Summer 2024</span>
+          </div>
+        </div>
+
+        <div class="exp-section">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Problem
+          </div>
+          <p class="exp-text">Data entry for identifying expenditures and collectables from client databases consumed too much of senior accountants' time in audit workflows.</p>
+        </div>
+
+        <div class="exp-section">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            Approach
+          </div>
+          <p class="exp-text">Streamlined data collection processes to improve efficiency in identifying expenditures and collectables from client databases, reducing manual data entry burden.</p>
+        </div>
+
+        <div class="exp-section">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Results
+          </div>
+          <p class="exp-text">Assisted on 12 audits and decreased senior audit timeline by 10% across 4 clients through improved data collection efficiency.</p>
+        </div>
+
+        <div class="exp-section exp-learning">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Key Learnings
+          </div>
+          <p class="exp-text exp-learning-text">Excel modeling, on-site audit procedures, and the importance of clean data entry for accurate financial analysis.</p>
+        </div>
+
+        <div class="tags">
+          <span class="tag">Excel</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Audit Procedures</span>
+          <span class="tag">Financial Analysis</span>
+        </div>
+      </div>
+
+      <!-- Georgia Tech ISyE -->
+      <div class="exp-card" data-animate>
+        <div class="exp-card-top">
+          <div class="exp-accent" style="background: #10b981;"></div>
+          <div class="exp-header">
+            <div>
+              <h3>Georgia Tech ISyE</h3>
+              <p class="exp-role">Undergraduate Research Assistant</p>
+            </div>
+            <span class="exp-date">Summer 2024</span>
+          </div>
+        </div>
+
+        <div class="exp-section">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Problem
+          </div>
+          <p class="exp-text">The MARTA Reach multimodal pilot program needed to understand transportation barriers and optimize access for transportation-disadvantaged persons.</p>
+        </div>
+
+        <div class="exp-section">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            Approach
+          </div>
+          <p class="exp-text">Synthesized alternative transportation access models for Tampa, FL, analyzing work schedules, feedback patterns, and constraints for transportation-disadvantaged individuals to gain insight into barriers.</p>
+        </div>
+
+        <div class="exp-section">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Results
+          </div>
+          <p class="exp-text">Optimized business model to expand transportation access for individuals less than one mile from their MARTA stop, addressing a critical gap in Atlanta's mobility infrastructure.</p>
+        </div>
+
+        <div class="exp-section exp-learning">
+          <div class="exp-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Key Learning
+          </div>
+          <p class="exp-text exp-learning-text">"A single mile keeps most Atlanta locals from working in the city, getting their kids to childcare, and accessing essential services."</p>
+        </div>
+
+        <div class="tags">
+          <span class="tag">System Analysis</span>
+          <span class="tag">Financial Modeling</span>
+          <span class="tag">Transportation Policy</span>
+          <span class="tag">Research</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <section id="projects" class="content-section">
         <div class="container section-stack">
