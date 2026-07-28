@@ -70,8 +70,6 @@
                 </div>
               </div>
 
-              <div class="hero-portrait-frame" id="hero-portrait-frame">
-                <img
                   id="hero-portrait"
                   class="hero-portrait"
                   src="assets/headshot.jpg"
@@ -88,50 +86,70 @@
       <section id="experience" class="content-section">
         <div class="container section-stack">
           <div class="section-intro" data-animate="heading">
+                 <section id="experience" class="content-section">
+        <div class="container section-stack">
+          <div class="section-intro" data-animate="heading">
             <p class="section-label">Experience</p>
             <h2>Where I've Worked</h2>
           </div>
 
-          <div class="experience-list">
-            <article
-              class="experience-card motion-card"
-              data-animate="experience-card"
-              data-tilt
-              style="--stagger: 0ms; --card-accent: #7aa2ff;"
-            >
-              <div class="experience-visual" aria-hidden="true">
-                <span class="orbit-ring"></span>
-                <span class="orbit-dot"></span>
-              </div>
-              <h3>JPMorganChase</h3>
-            </article>
+          <div class="experience-timeline">
+            <!-- Vertical Connecting Line -->
+            <div class="timeline-line" data-animate="line"></div>
 
-            <article
-              class="experience-card motion-card"
-              data-animate="experience-card"
-              data-tilt
-              style="--stagger: 110ms; --card-accent: #4bc0cb;"
-            >
-              <div class="experience-visual" aria-hidden="true">
-                <span class="orbit-ring"></span>
-                <span class="orbit-dot"></span>
-              </div>
-              <h3>Georgia Tech ISyE</h3>
-            </article>
+            <!-- Item 1 -->
+            <div class="timeline-item" data-animate="timeline-item" style="--stagger: 0ms; --card-accent: #ff9900;">
+              <div class="timeline-dot"></div>
+              <article class="experience-card motion-card" data-tilt>
+                <div class="card-header">
+                  <div class="company-logo" style="background: #ff9900; color: #0f0f0f;">AWS</div>
+                  <div class="company-info">
+                    <h3>Amazon Web Services</h3>
+                    <p class="card-role">Software Development Engineer Intern</p>
+                    <p class="card-meta">Palo Alto, CA • May 2025 - Aug 2025</p>
+                  </div>
+                </div>
+                <ul class="card-bullets">
+                  <li>Built an automation tool to streamline AWS on-call support, cutting resolution time from 6 hours to minutes</li>
+                  <li>Designed a distributed observability dashboard monitoring 250+ data streams with 30% faster root-cause analysis</li>
+                  <li>Outlined comprehensive design doc comparing 3 solutions with tradeoffs and architectural diagrams</li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">Lambda</span>
+                  <span class="tag">CDK</span>
+                  <span class="tag">AppConfig</span>
+                  <span class="tag">TypeScript</span>
+                </div>
+              </article>
+            </div>
 
-            <article
-              class="experience-card motion-card"
-              data-animate="experience-card"
-              data-tilt
-              style="--stagger: 220ms; --card-accent: #f1b36b;"
-            >
-              <div class="experience-visual" aria-hidden="true">
-                <span class="orbit-ring"></span>
-                <span class="orbit-dot"></span>
-              </div>
-              <h3>Novak Francella</h3>
-            </article>
+            <!-- Item 2 -->
+            <div class="timeline-item" data-animate="timeline-item" style="--stagger: 110ms; --card-accent: #0056D2;">
+              <div class="timeline-dot"></div>
+              <article class="experience-card motion-card" data-tilt>
+                <div class="card-header">
+                  <div class="company-logo" style="background: #0056D2; color: #ffffff;">MK</div>
+                  <div class="company-info">
+                    <h3>McKenney's</h3>
+                    <p class="card-role">Software Engineer Intern</p>
+                    <p class="card-meta">Atlanta, GA • May 2024 - Aug 2024</p>
+                  </div>
+                </div>
+                <ul class="card-bullets">
+                  <li>Built and deployed 3 automation pipelines in Python and SQL, boosting team efficiency by 50%</li>
+                  <li>Developed Pandas and Google Analytics API scripts to improve financial reporting by 25%</li>
+                  <li>Led knowledge base preprocessing for RAG using modern NLP vectorization techniques</li>
+                </ul>
+                <div class="tag-row">
+                  <span class="tag">Python</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">Pandas</span>
+                </div>
+              </article>
+            </div>
           </div>
+        </div>
+      </section>
         </div>
       </section>
 
