@@ -1614,3 +1614,279 @@ Let me know if you need any tweaks! 🚀
     padding: 0.3rem 0.65rem;
   }
 }
+/* ============================================
+   EXPERIENCE CARD STYLING
+   (Polished card UI with Problem → Approach → Results → Learning)
+   ============================================ */
+
+/* Main card container */
+.exp-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  overflow: hidden;
+  position: relative;
+}
+
+.exp-card:hover {
+  border-color: rgba(122, 162, 255, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Card header layout */
+.exp-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Colored accent bar on left */
+.exp-accent {
+  width: 4px;
+  height: 60px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.exp-card:hover .exp-accent {
+  opacity: 1;
+}
+
+/* Header content (company name + role) */
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.exp-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.exp-role {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+/* Date badge */
+.exp-date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+/* Section blocks (Problem, Approach, Results, Learning) */
+.exp-section {
+  margin-bottom: 1.2rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  border-left: 3px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.exp-section:last-of-type:not(.exp-learning) {
+  margin-bottom: 1.5rem;
+}
+
+.exp-section:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-left-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Section label with icon */
+.exp-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+  transition: color 0.25s ease;
+}
+
+.exp-label svg {
+  width: 14px;
+  height: 14px;
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 2;
+  flex-shrink: 0;
+  transition: stroke 0.25s ease;
+}
+
+.exp-section:hover .exp-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.exp-section:hover .exp-label svg {
+  stroke: rgba(255, 255, 255, 0.8);
+}
+
+/* Section text content */
+.exp-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== KEY LEARNING SECTION (Gold Highlight) ===== */
+.exp-learning {
+  border-left-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.exp-learning:hover {
+  background: rgba(245, 158, 11, 0.12);
+  border-left-color: #fbbf24;
+}
+
+.exp-learning .exp-label {
+  color: #f59e0b;
+}
+
+.exp-learning .exp-label svg {
+  stroke: #f59e0b;
+}
+
+.exp-learning-text {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+/* ===== TAGS SECTION ===== */
+.exp-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.exp-card .tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.exp-card .tag:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== EXPERIENCE LIST CONTAINER ===== */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ===== RESPONSIVE TWEAKS ===== */
+@media (max-width: 768px) {
+  .exp-card {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .exp-card-top {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .exp-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .exp-date {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .exp-accent {
+    height: 50px;
+  }
+
+  .exp-section {
+    padding: 0.8rem 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .exp-card {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .exp-header h3 {
+    font-size: 1rem;
+  }
+
+  .exp-role {
+    font-size: 0.9rem;
+  }
+
+  .exp-text {
+    font-size: 0.9rem;
+  }
+
+  .exp-accent {
+    height: 45px;
+  }
+
+  .exp-card .tags {
+    gap: 0.5rem;
+  }
+
+  .exp-card .tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.65rem;
+  }
+}
