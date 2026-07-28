@@ -1020,15 +1020,40 @@ select {
   line-height: 1.02;
 }
 
-.experience-list {
-  display: grid;
+.experience-carousel {
   width: min(100%, 780px);
   margin: 0 auto;
-  gap: 1.25rem;
+}
+
+.experience-viewport {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  touch-action: pan-x pan-y;
+  -ms-overflow-style: none;
+}
+
+.experience-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.experience-viewport:focus-visible {
+  outline: 2px solid #7aa2ff;
+  outline-offset: 5px;
+}
+
+.experience-list {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
   perspective: 1000px;
 }
 
 .exp-card {
+  flex: 0 0 100%;
+  min-width: 0;
   position: relative;
   overflow: hidden;
   padding: 1.5rem;
@@ -1043,6 +1068,8 @@ select {
     border-color 220ms ease,
     box-shadow 220ms ease,
     background 220ms ease;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .exp-card::before {
@@ -1196,6 +1223,85 @@ select {
   font-weight: 600;
 }
 
+.experience-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.carousel-nav {
+  display: inline-grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(203, 222, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: #edf3ff;
+  cursor: pointer;
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, opacity 180ms ease;
+}
+
+.carousel-nav:hover:not(:disabled) {
+  border-color: rgba(122, 162, 255, 0.58);
+  background: rgba(122, 162, 255, 0.14);
+  transform: translateY(-2px);
+}
+
+.carousel-nav:focus-visible,
+.carousel-dot:focus-visible {
+  outline: 2px solid #7aa2ff;
+  outline-offset: 3px;
+}
+
+.carousel-nav:disabled {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+.experience-carousel-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.carousel-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(203, 222, 255, 0.28);
+  cursor: pointer;
+  transition: width 180ms ease, background 180ms ease;
+}
+
+.carousel-dot:hover {
+  background: rgba(158, 196, 255, 0.7);
+}
+
+.carousel-dot.is-active {
+  width: 1.65rem;
+  background: #7aa2ff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Retain the portfolio's horizontally scrollable project row. */
 .project-list {
   display: flex;
@@ -1233,6 +1339,10 @@ select {
     border-radius: 14px;
   }
 
+  .experience-carousel-controls {
+    justify-content: space-between;
+  }
+
   .exp-card-top {
     gap: 0.75rem;
     margin-bottom: 1rem;
@@ -1253,5 +1363,11 @@ select {
 
   .exp-text {
     font-size: 0.87rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-viewport {
+    scroll-behavior: auto;
   }
 }
