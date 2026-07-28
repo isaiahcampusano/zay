@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="style.css?v=20260728-experience-carousel">
+  <link rel="stylesheet" href="style.css?v=20260728-experience-dialogs">
 </head>
 <body>
   <div class="page-shell">
@@ -88,7 +88,6 @@
      <!-- ======================== EXPERIENCE ======================== -->
 <section id="experience">
   <div class="container">
-
     <div class="section-eyebrow" data-animate>
       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
       Experience
@@ -96,240 +95,250 @@
 
     <h2 class="section-heading" data-animate>Where I've Worked</h2>
 
-    <div class="experience-carousel">
-      <div
-        id="experience-carousel-viewport"
-        class="experience-viewport"
-        role="region"
-        aria-roledescription="carousel"
-        aria-label="Professional experience"
-        aria-describedby="experience-carousel-status"
-        tabindex="0"
-      >
-        <div class="experience-list">
-
-      <!-- JPMorganChase - Jira Automations -->
-      <article
-        id="experience-slide-1"
-        class="exp-card"
-        data-animate
-        role="group"
-        aria-roledescription="slide"
-        aria-label="Experience 1 of 3: JPMorganChase, Product Operations Analyst"
-      >
-        <div class="exp-card-top">
-          <div class="exp-accent" style="background: #3b82f6;"></div>
-          <div class="exp-header">
-            <div>
-              <h3>JPMorganChase</h3>
-              <p class="exp-role">Product Operations Analyst</p>
-            </div>
-            <span class="exp-date">Summer 2025</span>
+    <div class="experience-preview-grid">
+      <article class="experience-preview-card" style="--experience-accent: #3b82f6;" data-animate>
+        <div class="experience-preview-header">
+          <span class="experience-preview-accent" aria-hidden="true"></span>
+          <div class="experience-preview-identity">
+            <h3>JPMorganChase</h3>
+            <p class="experience-preview-role">Product Operations Analyst</p>
+            <p class="experience-preview-date">Summer 2025</p>
           </div>
         </div>
-
-        <!-- Problem -->
-        <div class="exp-section">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Problem
-          </div>
-          <p class="exp-text">Sprint updates and blocker escalation across 10+ card product teams depended heavily on manual board checks and inconsistent communication. A blocker escalation firing at 5pm EST hits a London stakeholder at 10pm — by morning, the context is stale. Different squads defining "done" differently meant DoD checks fired at different moments, making data incomparable across teams.</p>
-        </div>
-
-        <!-- Approach -->
-        <div class="exp-section">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-            Approach
-          </div>
-          <p class="exp-text">Built Jira-integrated automation workflows that triggered real-time notifications for ticket events, blockers, and sprint-state changes across the product organization.</p>
-        </div>
-
-        <!-- Results -->
-        <div class="exp-section">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Results
-          </div>
-          <p class="exp-text">Reduced manual workflow overhead, accelerated blocker visibility, and improved sprint coordination across multiple card product squads.</p>
-        </div>
-
-        <!-- Learnings -->
-        <div class="exp-section exp-learning">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            Key Learning
-          </div>
-          <p class="exp-text exp-learning-text">"Automation is most valuable when it removes coordination friction, not just repetitive clicks."</p>
-        </div>
-
-        <div class="tags">
-          <span class="tag">Jira Align</span>
-          <span class="tag">Automation</span>
-          <span class="tag">Agile/Scrum</span>
-          <span class="tag">Process Optimization</span>
-        </div>
-      </article>
-
-      <!-- JPMorganChase - Audit Efficiency -->
-      <article
-        id="experience-slide-2"
-        class="exp-card"
-        data-animate
-        role="group"
-        aria-roledescription="slide"
-        aria-label="Experience 2 of 3: JPMorganChase, Audit Operations Intern"
-      >
-        <div class="exp-card-top">
-          <div class="exp-accent" style="background: #8b5cf6;"></div>
-          <div class="exp-header">
-            <div>
-              <h3>Novak Francella</h3>
-              <p class="exp-role">Audit Operations Intern</p>
-            </div>
-            <span class="exp-date">Summer 2023</span>
-          </div>
-        </div>
-
-        <div class="exp-section">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Problem
-          </div>
-          <p class="exp-text">Data entry for identifying expenditures and collectables from client databases consumed too much of senior accountants' time in audit workflows.</p>
-        </div>
-
-        <div class="exp-section">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-            Approach
-          </div>
-          <p class="exp-text">Streamlined data collection processes to improve efficiency in identifying expenditures and collectables from client databases, reducing manual data entry burden.</p>
-        </div>
-
-        <div class="exp-section">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Results
-          </div>
-          <p class="exp-text">Assisted on 12 audits and decreased senior audit timeline by 10% across 4 clients through improved data collection efficiency.</p>
-        </div>
-
-        <div class="exp-section exp-learning">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            Key Learnings
-          </div>
-          <p class="exp-text exp-learning-text">Excel modeling, on-site audit procedures, and the importance of clean data entry for accurate financial analysis.</p>
-        </div>
-
-        <div class="tags">
-          <span class="tag">Excel</span>
-          <span class="tag">Data Analysis</span>
-          <span class="tag">Audit Procedures</span>
-          <span class="tag">Financial Analysis</span>
-        </div>
-      </article>
-
-      <!-- Georgia Tech ISyE -->
-      <article
-        id="experience-slide-3"
-        class="exp-card"
-        data-animate
-        role="group"
-        aria-roledescription="slide"
-        aria-label="Experience 3 of 3: Georgia Tech ISyE, Undergraduate Research Assistant"
-      >
-        <div class="exp-card-top">
-          <div class="exp-accent" style="background: #10b981;"></div>
-          <div class="exp-header">
-            <div>
-              <h3>Georgia Tech ISyE</h3>
-              <p class="exp-role">Undergraduate Research Assistant</p>
-            </div>
-            <span class="exp-date">Summer 2024</span>
-          </div>
-        </div>
-
-        <div class="exp-section">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Problem
-          </div>
-          <p class="exp-text">The MARTA Reach multimodal pilot program needed to understand transportation barriers and optimize access for transportation-disadvantaged persons.</p>
-        </div>
-
-        <div class="exp-section">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-            Approach
-          </div>
-          <p class="exp-text">Synthesized alternative transportation access models for Tampa, FL, analyzing work schedules, feedback patterns, and constraints for transportation-disadvantaged individuals to gain insight into barriers.</p>
-        </div>
-
-        <div class="exp-section">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Results
-          </div>
-          <p class="exp-text">Optimized business model to expand transportation access for individuals less than one mile from their MARTA stop, addressing a critical gap in Atlanta's mobility infrastructure.</p>
-        </div>
-
-        <div class="exp-section exp-learning">
-          <div class="exp-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            Key Learning
-          </div>
-          <p class="exp-text exp-learning-text">"A single mile keeps most Atlanta locals from working in the city, getting their kids to childcare, and accessing essential services."</p>
-        </div>
-
-        <div class="tags">
-          <span class="tag">System Analysis</span>
-          <span class="tag">Financial Modeling</span>
-          <span class="tag">Transportation Policy</span>
-          <span class="tag">Research</span>
-        </div>
-      </article>
-
-        </div>
-      </div>
-
-      <div class="experience-carousel-controls">
         <button
           type="button"
-          class="carousel-nav carousel-prev"
-          aria-label="Show previous experience"
-          aria-controls="experience-carousel-viewport"
-          disabled
+          class="experience-preview-action"
+          data-dialog-target="experience-dialog-1"
+          aria-haspopup="dialog"
+          aria-label="View experience details for JPMorganChase Product Operations Analyst"
         >
-          <span aria-hidden="true">←</span>
-        </button>
-
-        <div class="experience-carousel-pagination" role="group" aria-label="Choose an experience">
-          <button type="button" class="carousel-dot is-active" aria-label="Show experience 1: JPMorganChase Product Operations Analyst" aria-controls="experience-slide-1" aria-current="true">
-            <span class="sr-only">Experience 1</span>
-          </button>
-          <button type="button" class="carousel-dot" aria-label="Show experience 2: JPMorganChase Audit Operations Intern" aria-controls="experience-slide-2">
-            <span class="sr-only">Experience 2</span>
-          </button>
-          <button type="button" class="carousel-dot" aria-label="Show experience 3: Georgia Tech ISyE Undergraduate Research Assistant" aria-controls="experience-slide-3">
-            <span class="sr-only">Experience 3</span>
-          </button>
-        </div>
-
-        <button
-          type="button"
-          class="carousel-nav carousel-next"
-          aria-label="Show next experience"
-          aria-controls="experience-carousel-viewport"
-        >
+          <span>View experience</span>
           <span aria-hidden="true">→</span>
         </button>
-      </div>
+      </article>
 
-      <p id="experience-carousel-status" class="sr-only" aria-live="polite">Showing experience 1 of 3.</p>
+      <article class="experience-preview-card" style="--experience-accent: #8b5cf6;" data-animate>
+        <div class="experience-preview-header">
+          <span class="experience-preview-accent" aria-hidden="true"></span>
+          <div class="experience-preview-identity">
+            <h3>Novak Francella</h3>
+            <p class="experience-preview-role">Audit Operations Intern</p>
+            <p class="experience-preview-date">Summer 2023</p>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="experience-preview-action"
+          data-dialog-target="experience-dialog-2"
+          aria-haspopup="dialog"
+          aria-label="View experience details for Novak Francella Audit Operations Intern"
+        >
+          <span>View experience</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </article>
+
+      <article class="experience-preview-card" style="--experience-accent: #10b981;" data-animate>
+        <div class="experience-preview-header">
+          <span class="experience-preview-accent" aria-hidden="true"></span>
+          <div class="experience-preview-identity">
+            <h3>Georgia Tech ISyE</h3>
+            <p class="experience-preview-role">Undergraduate Research Assistant</p>
+            <p class="experience-preview-date">Summer 2024</p>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="experience-preview-action"
+          data-dialog-target="experience-dialog-3"
+          aria-haspopup="dialog"
+          aria-label="View experience details for Georgia Tech ISyE Undergraduate Research Assistant"
+        >
+          <span>View experience</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </article>
     </div>
+
+    <dialog id="experience-dialog-1" class="experience-dialog" style="--experience-accent: #3b82f6;" aria-labelledby="experience-dialog-1-title">
+      <div class="experience-dialog-panel">
+        <button type="button" class="experience-dialog-close" data-dialog-close aria-label="Close JPMorganChase experience details">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <header class="experience-dialog-header">
+          <span class="experience-dialog-accent" aria-hidden="true"></span>
+          <div class="experience-dialog-identity">
+            <h3 id="experience-dialog-1-title">
+              JPMorganChase
+              <span class="experience-dialog-role">Product Operations Analyst</span>
+            </h3>
+            <p class="experience-dialog-date">Summer 2025</p>
+          </div>
+        </header>
+
+        <div class="experience-dialog-content">
+          <section class="exp-section">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Problem
+            </div>
+            <p class="exp-text">Sprint updates and blocker escalation across 10+ card product teams depended heavily on manual board checks and inconsistent communication. A blocker escalation firing at 5pm EST hits a London stakeholder at 10pm — by morning, the context is stale. Different squads defining "done" differently meant DoD checks fired at different moments, making data incomparable across teams.</p>
+          </section>
+
+          <section class="exp-section">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              Approach
+            </div>
+            <p class="exp-text">Built Jira-integrated automation workflows that triggered real-time notifications for ticket events, blockers, and sprint-state changes across the product organization.</p>
+          </section>
+
+          <section class="exp-section">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Results
+            </div>
+            <p class="exp-text">Reduced manual workflow overhead, accelerated blocker visibility, and improved sprint coordination across multiple card product squads.</p>
+          </section>
+
+          <section class="exp-section exp-learning">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              Key Learning
+            </div>
+            <p class="exp-text exp-learning-text">"Automation is most valuable when it removes coordination friction, not just repetitive clicks."</p>
+          </section>
+
+          <div class="tags">
+            <span class="tag">Jira Align</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Agile/Scrum</span>
+            <span class="tag">Process Optimization</span>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="experience-dialog-2" class="experience-dialog" style="--experience-accent: #8b5cf6;" aria-labelledby="experience-dialog-2-title">
+      <div class="experience-dialog-panel">
+        <button type="button" class="experience-dialog-close" data-dialog-close aria-label="Close Novak Francella experience details">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <header class="experience-dialog-header">
+          <span class="experience-dialog-accent" aria-hidden="true"></span>
+          <div class="experience-dialog-identity">
+            <h3 id="experience-dialog-2-title">
+              Novak Francella
+              <span class="experience-dialog-role">Audit Operations Intern</span>
+            </h3>
+            <p class="experience-dialog-date">Summer 2023</p>
+          </div>
+        </header>
+
+        <div class="experience-dialog-content">
+          <section class="exp-section">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Problem
+            </div>
+            <p class="exp-text">Data entry for identifying expenditures and collectables from client databases consumed too much of senior accountants' time in audit workflows.</p>
+          </section>
+
+          <section class="exp-section">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              Approach
+            </div>
+            <p class="exp-text">Streamlined data collection processes to improve efficiency in identifying expenditures and collectables from client databases, reducing manual data entry burden.</p>
+          </section>
+
+          <section class="exp-section">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Results
+            </div>
+            <p class="exp-text">Assisted on 12 audits and decreased senior audit timeline by 10% across 4 clients through improved data collection efficiency.</p>
+          </section>
+
+          <section class="exp-section exp-learning">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              Key Learnings
+            </div>
+            <p class="exp-text exp-learning-text">Excel modeling, on-site audit procedures, and the importance of clean data entry for accurate financial analysis.</p>
+          </section>
+
+          <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Audit Procedures</span>
+            <span class="tag">Financial Analysis</span>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="experience-dialog-3" class="experience-dialog" style="--experience-accent: #10b981;" aria-labelledby="experience-dialog-3-title">
+      <div class="experience-dialog-panel">
+        <button type="button" class="experience-dialog-close" data-dialog-close aria-label="Close Georgia Tech ISyE experience details">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <header class="experience-dialog-header">
+          <span class="experience-dialog-accent" aria-hidden="true"></span>
+          <div class="experience-dialog-identity">
+            <h3 id="experience-dialog-3-title">
+              Georgia Tech ISyE
+              <span class="experience-dialog-role">Undergraduate Research Assistant</span>
+            </h3>
+            <p class="experience-dialog-date">Summer 2024</p>
+          </div>
+        </header>
+
+        <div class="experience-dialog-content">
+          <section class="exp-section">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Problem
+            </div>
+            <p class="exp-text">The MARTA Reach multimodal pilot program needed to understand transportation barriers and optimize access for transportation-disadvantaged persons.</p>
+          </section>
+
+          <section class="exp-section">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              Approach
+            </div>
+            <p class="exp-text">Synthesized alternative transportation access models for Tampa, FL, analyzing work schedules, feedback patterns, and constraints for transportation-disadvantaged individuals to gain insight into barriers.</p>
+          </section>
+
+          <section class="exp-section">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Results
+            </div>
+            <p class="exp-text">Optimized business model to expand transportation access for individuals less than one mile from their MARTA stop, addressing a critical gap in Atlanta's mobility infrastructure.</p>
+          </section>
+
+          <section class="exp-section exp-learning">
+            <div class="exp-label">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              Key Learning
+            </div>
+            <p class="exp-text exp-learning-text">"A single mile keeps most Atlanta locals from working in the city, getting their kids to childcare, and accessing essential services."</p>
+          </section>
+
+          <div class="tags">
+            <span class="tag">System Analysis</span>
+            <span class="tag">Financial Modeling</span>
+            <span class="tag">Transportation Policy</span>
+            <span class="tag">Research</span>
+          </div>
+        </div>
+      </div>
+    </dialog>
   </div>
 </section>
 
@@ -492,117 +501,59 @@
 
     animated.forEach((element) => observer.observe(element));
 
-    const experienceViewport = document.getElementById("experience-carousel-viewport");
-    const experienceSlides = experienceViewport?.querySelectorAll(".exp-card");
-    const previousExperience = document.querySelector(".carousel-prev");
-    const nextExperience = document.querySelector(".carousel-next");
-    const experienceDots = document.querySelectorAll(".carousel-dot");
-    const experienceStatus = document.getElementById("experience-carousel-status");
+    const dialogTriggers = document.querySelectorAll("[data-dialog-target]");
+    const experienceDialogs = document.querySelectorAll(".experience-dialog");
+    let lastDialogTrigger = null;
 
-    if (experienceViewport && experienceSlides?.length && previousExperience && nextExperience && experienceDots.length) {
-      let activeExperience = 0;
-      let carouselFrame;
-      let resizeFrame;
+    dialogTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const dialogId = trigger.dataset.dialogTarget;
+        const dialog = dialogId ? document.getElementById(dialogId) : null;
 
-      const setActiveExperience = (index) => {
-        activeExperience = Math.max(0, Math.min(index, experienceSlides.length - 1));
-        const activeSlide = experienceSlides[activeExperience];
-        const company = activeSlide.querySelector("h3")?.textContent?.trim() || "experience";
-        const role = activeSlide.querySelector(".exp-role")?.textContent?.trim() || "";
-
-        previousExperience.disabled = activeExperience === 0;
-        nextExperience.disabled = activeExperience === experienceSlides.length - 1;
-
-        experienceDots.forEach((dot, dotIndex) => {
-          const isActive = dotIndex === activeExperience;
-          dot.classList.toggle("is-active", isActive);
-
-          if (isActive) {
-            dot.setAttribute("aria-current", "true");
-          } else {
-            dot.removeAttribute("aria-current");
-          }
-        });
-
-        if (experienceStatus) {
-          experienceStatus.textContent = `Showing experience ${activeExperience + 1} of ${experienceSlides.length}: ${company}${role ? `, ${role}` : ""}.`;
-        }
-      };
-
-      const scrollToExperience = (index, behavior = prefersReducedMotion.matches ? "auto" : "smooth") => {
-        const nextIndex = Math.max(0, Math.min(index, experienceSlides.length - 1));
-
-        experienceViewport.scrollTo({
-          left: experienceSlides[nextIndex].offsetLeft,
-          behavior
-        });
-
-        setActiveExperience(nextIndex);
-      };
-
-      const syncActiveExperience = () => {
-        const viewportCenter = experienceViewport.scrollLeft + (experienceViewport.clientWidth / 2);
-        let closestIndex = 0;
-        let closestDistance = Number.POSITIVE_INFINITY;
-
-        experienceSlides.forEach((slide, index) => {
-          const slideCenter = slide.offsetLeft + (slide.offsetWidth / 2);
-          const distance = Math.abs(slideCenter - viewportCenter);
-
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestIndex = index;
-          }
-        });
-
-        setActiveExperience(closestIndex);
-      };
-
-      previousExperience.addEventListener("click", () => scrollToExperience(activeExperience - 1));
-      nextExperience.addEventListener("click", () => scrollToExperience(activeExperience + 1));
-
-      experienceDots.forEach((dot, index) => {
-        dot.addEventListener("click", () => scrollToExperience(index));
-      });
-
-      experienceViewport.addEventListener("scroll", () => {
-        window.cancelAnimationFrame(carouselFrame);
-        carouselFrame = window.requestAnimationFrame(syncActiveExperience);
-      }, { passive: true });
-
-      experienceViewport.addEventListener("keydown", (event) => {
-        if (event.target.closest("button")) {
+        if (!dialog || typeof dialog.showModal !== "function" || dialog.open) {
           return;
         }
 
-        if (event.key === "ArrowLeft") {
-          event.preventDefault();
-          scrollToExperience(activeExperience - 1);
-        }
+        experienceDialogs.forEach((openDialog) => {
+          if (openDialog !== dialog && openDialog.open) {
+            openDialog.close();
+          }
+        });
 
-        if (event.key === "ArrowRight") {
-          event.preventDefault();
-          scrollToExperience(activeExperience + 1);
-        }
+        lastDialogTrigger = trigger;
+        dialog.showModal();
+        document.body.classList.add("dialog-open");
 
-        if (event.key === "Home") {
-          event.preventDefault();
-          scrollToExperience(0);
-        }
+        window.requestAnimationFrame(() => {
+          if (dialog.open) {
+            dialog.querySelector("[data-dialog-close]")?.focus();
+          }
+        });
+      });
+    });
 
-        if (event.key === "End") {
-          event.preventDefault();
-          scrollToExperience(experienceSlides.length - 1);
+    experienceDialogs.forEach((dialog) => {
+      dialog.querySelectorAll("[data-dialog-close]").forEach((closeButton) => {
+        closeButton.addEventListener("click", () => dialog.close());
+      });
+
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) {
+          dialog.close();
         }
       });
 
-      window.addEventListener("resize", () => {
-        window.cancelAnimationFrame(resizeFrame);
-        resizeFrame = window.requestAnimationFrame(() => scrollToExperience(activeExperience, "auto"));
-      });
+      dialog.addEventListener("close", () => {
+        document.body.classList.remove("dialog-open");
 
-      setActiveExperience(0);
-    }
+        const triggerToRestore = lastDialogTrigger;
+        lastDialogTrigger = null;
+
+        if (triggerToRestore?.isConnected) {
+          triggerToRestore.focus();
+        }
+      });
+    });
 
     if (!prefersReducedMotion.matches && supportsFinePointer.matches) {
       document.querySelectorAll("[data-tilt]").forEach((card) => {
