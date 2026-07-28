@@ -1004,3 +1004,56 @@ select {
     font-size: 0.9rem;
   }
 }
+/* ============================================
+   EXPERIENCE CARD - ENHANCED STRUCTURE
+   (Problem → Approach → Results → Learning)
+   ============================================ */
+
+.exp-section {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  border-left: 2px solid rgba(255, 255, 255, 0.06);
+}
+
+.exp-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #888;
+  margin-bottom: 3px;
+}
+
+.exp-label svg {
+  stroke: #888;
+}
+
+.exp-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #e5e5e5;
+}
+
+.exp-learning {
+  border-left-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.exp-learning .exp-label {
+  color: #f59e0b;
+}
+
+.exp-learning .exp-label svg {
+  stroke: #f59e0b;
+}
+
+.exp-learning-text {
+  font-style: italic;
+  color: #aaa;
+}
