@@ -1,42 +1,4 @@
-chess api -> test and run -> gitfolio
-Correct! Just add it to the bottom. No need to delete anything. ✅
-
-Simple Steps:
-Scroll to the very bottom of your style.css file
-
-Paste the new CSS code (the .exp-section stuff)
-
-Save (Ctrl + S)
-
-Refresh your browser (F5)
-
-Why This Works
-CSS reads from top to bottom. When you add new styles at the bottom:
-
-✅ They override any conflicting styles above
-
-✅ They add new styles that didn't exist before
-
-✅ Nothing gets broken or deleted
-
-Quick Visual Check
-Your file should end like this:
-
-text
-/* ... existing CSS ... */
-
-/* ============================================
-   EXPERIENCE CARD - ENHANCED STRUCTURE  ← NEW
-   ============================================ */
-
-.exp-section { ... }        ← PASTE THIS BLOCK
-.exp-label { ... }
-.exp-text { ... }
-.exp-learning { ... }
-.exp-learning-text { ... }
-That's it! Nothing to delete, just add to the bottom and save. 🚀
-
-this good? *,
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -417,6 +379,13 @@ select {
   line-height: 1.02;
 }
 
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  perspective: 1000px;
+}
+
 .project-list,
 .writing-list {
   display: grid;
@@ -424,24 +393,142 @@ select {
 }
 
 .project-list {
-  display: flex;
-  overflow-x: auto;
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
   align-items: stretch;
   perspective: 1000px;
-  scroll-snap-type: x proximity;
-  scrollbar-color: #7aa2ff transparent;
-  scrollbar-width: thin;
-  padding-bottom: 0.75rem;
 }
 
-.project-list::-webkit-scrollbar {
-  height: 8px;
+.experience-card {
+  --spot-x: 50%;
+  --spot-y: 50%;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  position: relative;
+  min-height: 270px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 22%, transparent);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at var(--spot-x) var(--spot-y), color-mix(in srgb, var(--card-accent) 13%, transparent), transparent 42%),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transition:
+    opacity 520ms ease,
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+  transition-delay: var(--stagger, 0ms);
 }
 
-.project-list::-webkit-scrollbar-thumb {
-  background: #7aa2ff;
-  border-radius: 999px;
+.experience-card::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  aspect-ratio: 1;
+  top: 1.2rem;
+  left: 50%;
+  border-radius: 50%;
+  background: var(--card-accent);
+  filter: blur(80px);
+  opacity: 0.1;
+  transform: translateX(-50%);
+  transition: opacity 220ms ease, transform 500ms ease;
+}
+
+.experience-card h3 {
+  position: relative;
+  z-index: 2;
+  max-width: 10ch;
+  color: #f7f9fd;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  line-height: 1.08;
+  transform: translateZ(24px);
+}
+
+.experience-visual {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  transform: translateY(-0.5rem);
+}
+
+.orbit-ring {
+  position: relative;
+  width: 112px;
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 48%, transparent);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 24px color-mix(in srgb, var(--card-accent) 12%, transparent),
+    0 0 30px color-mix(in srgb, var(--card-accent) 8%, transparent);
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.orbit-ring::before,
+.orbit-ring::after {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit-ring::before {
+  width: 68px;
+  aspect-ratio: 1;
+  border: 1px dashed color-mix(in srgb, var(--card-accent) 30%, transparent);
+}
+
+.orbit-ring::after {
+  width: 8px;
+  aspect-ratio: 1;
+  background: var(--card-accent);
+  box-shadow: 0 0 22px var(--card-accent);
+}
+
+.orbit-dot {
+  position: absolute;
+  top: calc(50% - 4px);
+  left: calc(50% + 52px);
+  width: 9px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--card-accent);
+  box-shadow: 0 0 18px var(--card-accent);
+  transform-origin: -52px 4px;
+}
+
+.experience-card.in-view .orbit-ring {
+  animation: orbit-breathe 5s ease-in-out infinite;
+}
+
+.experience-card.in-view .orbit-dot {
+  animation: orbit-dot 6s linear infinite;
+}
+
+.experience-card.in-view:hover {
+  border-color: color-mix(in srgb, var(--card-accent) 48%, transparent);
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.32);
+  transform:
+    perspective(900px)
+    translateY(-6px)
+    rotateX(var(--tilt-x))
+    rotateY(var(--tilt-y));
+}
+
+.experience-card:hover::before {
+  opacity: 0.18;
+  transform: translateX(-50%) scale(1.15);
+}
+
+.experience-card:hover .orbit-ring {
+  transform: scale(1.12);
 }
 
 .list-card,
@@ -507,9 +594,7 @@ select {
 }
 
 .project-card {
-  flex: 0 0 clamp(280px, 70vw, 560px);
   min-height: 340px;
-  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -720,6 +805,10 @@ select {
   transform: translateX(-20px);
 }
 
+[data-animate="experience-card"] {
+  transform: translateY(34px) scale(0.97);
+}
+
 [data-animate="project-primary"] {
   transform: translate(-26px, 22px) scale(0.98);
 }
@@ -735,6 +824,27 @@ select {
 [data-animate].in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+@keyframes orbit-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes orbit-dot {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes hero-marquee-scroll {
@@ -766,6 +876,15 @@ select {
 
   .nav-links {
     display: none;
+  }
+
+  .experience-list,
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card {
+    min-height: 220px;
   }
 
   .project-card {
@@ -828,6 +947,10 @@ select {
     padding: 1.2rem;
     border-radius: 20px;
   }
+
+  .experience-card {
+    min-height: 190px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -858,1035 +981,277 @@ select {
   }
 }
 
-/* ========================================
-   NEW: EXPERIENCE TIMELINE UI
-   (Appended to the bottom)
-   ======================================== */
+/* ============================================
+   EXPERIENCE CARDS
+   ============================================ */
 
-.experience-timeline {
+#experience {
+  padding: 5rem 0;
+  border-top: 1px solid rgba(203, 222, 255, 0.08);
+}
+
+#experience .container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  color: #9ec4ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.section-eyebrow svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.section-heading {
+  margin: 0;
+  color: #f7f9fd;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+.experience-list {
+  display: grid;
+  width: min(100%, 780px);
+  margin: 0 auto;
+  gap: 1.25rem;
+  perspective: 1000px;
+}
+
+.exp-card {
   position: relative;
-  padding-left: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-/* Vertical line animation */
-.timeline-line {
-  position: absolute;
-  left: 0.8rem;
-  top: 1.5rem;
-  bottom: 0;
-  width: 2px;
-  background: rgba(255, 255, 255, 0.15);
-  transform-origin: top center;
-  transform: scaleY(0);
-  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.timeline-line.in-view {
-  transform: scaleY(1);
-}
-
-/* Timeline Item container */
-.timeline-item {
-  position: relative;
-  opacity: 0;
-  transition: opacity 600ms ease, transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--stagger, 0ms);
-}
-
-/* Initial hidden state for the item */
-[data-animate="timeline-item"] {
-  transform: translateX(40px) translateY(0);
-  opacity: 0;
-}
-
-[data-animate="timeline-item"].in-view {
-  transform: translateX(0) translateY(0);
-  opacity: 1;
-}
-
-/* Glowing timeline dot */
-.timeline-dot {
-  position: absolute;
-  left: 0.8rem;
-  top: 1.5rem;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--card-accent);
-  box-shadow: 0 0 20px var(--card-accent);
-  transform: translateX(-50%) translateY(-50%) scale(0);
-  opacity: 0;
-  transition: transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1) 250ms, 
-              opacity 300ms ease 200ms;
-  border: 2px solid #050505;
-  z-index: 2;
-}
-
-.timeline-item.in-view .timeline-dot {
-  transform: translateX(-50%) translateY(-50%) scale(1);
-  opacity: 1;
-}
-
-/* New Detailed Experience Card */
-.experience-card {
-  --spot-x: 50%;
-  --spot-y: 50%;
-  --tilt-x: 0deg;
-  --tilt-y: 0deg;
-  position: relative;
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  background: radial-gradient(circle at var(--spot-x) var(--spot-y), rgba(255,255,255,0.04), transparent 60%), rgba(255,255,255,0.02);
-  backdrop-filter: blur(8px);
-  transform-style: preserve-3d;
   overflow: hidden;
-  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.experience-card:hover {
-  border-color: color-mix(in srgb, var(--card-accent) 40%, transparent);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  transform: perspective(900px) translateY(-4px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
-}
-
-.experience-card .card-header {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.experience-card .company-logo {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 700;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
-.experience-card .company-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.experience-card .company-info h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-.experience-card .card-role {
-  margin: 0;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
-}
-
-.experience-card .card-meta {
-  margin: 0;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
-  font-family: "IBM Plex Mono", monospace;
-}
-
-.experience-card .card-bullets {
-  margin: 0;
-  padding-left: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.experience-card .card-bullets li {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.experience-card .tag-row {
-  margin-top: 0.25rem;
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 780px) {
-  .experience-timeline {
-    padding-left: 1.5rem;
-    gap: 2rem;
-  }
-  .timeline-line, .timeline-dot {
-    left: 0.3rem;
-  }
-  .timeline-dot {
-    width: 12px;
-    height: 12px;
-  }
-  .experience-card .card-header {
-    flex-direction: row;
-  }
-  .experience-card .company-logo {
-    width: 44px;
-    height: 44px;
-    font-size: 0.9rem;
-  }
-}
-Yes, that's perfect! ✅
-
-I can see you've successfully added the new CSS at the bottom of your file. Your style.css now contains:
-
-✅ All your original styles (hero, projects, contact, etc.)
-
-✅ The Experience Timeline UI styles (the ones that were already there)
-
-✅ The new Experience Card Enhanced Structure (the .exp-section stuff you just added at the very bottom)
-
-Quick Check: What You Added
-At the very end of your file, I can see:
-
-css
-/* ============================================
-   EXPERIENCE CARD - ENHANCED STRUCTURE
-   (Problem → Approach → Results → Learning)
-   ============================================ */
-
-.exp-section { ... }
-.exp-label { ... }
-.exp-text { ... }
-.exp-learning { ... }
-.exp-learning-text { ... }
-This is exactly what we needed! 🎉
-
-What Happens Next
-When you save and refresh your browser, your Experience cards will now display:
-
-✅ Problem section with a ⚠️ icon
-
-✅ Approach section with a 🛡️ icon
-
-✅ Results section with a ✅ icon
-
-✅ Key Learning section with a gold border and 📚 icon
-
-✅ Better spacing and visual hierarchy
-
-One Small Note
-Your file has two different experience styles now:
-
-.experience-card + .experience-timeline (the older timeline version)
-
-.exp-section + .exp-label (the new Problem→Approach→Results→Learning version)
-
-They can coexist peacefully - the new styles only apply to elements with those specific class names. No conflicts! ✅
-
-Save the file (Ctrl + S) and refresh your browser to see the changes! Let me know how it looks! 🚀
-
-can you make the ui more appealing like the card i showed in the second image?
-We need to compare what they have vs the desired style. The second image is an "experience card" style with a more compact, visually appealing layout: it has a header with role, date, a card with sections (Problem, Approach, Results, Key Learnings) with icons and color highlights, and tags at bottom. The current HTML uses a similar structure but maybe the styling doesn't match the second image's visual appeal.
-
-The user wants the UI to be more appealing like the card in the second image. That second image shows a card for "Interpretability & Deception in LLMs" with a header, then sections with labels (The Problem, Approach, Results, Key Learnings) with icons and maybe a different background. Also tags at bottom.
-
-Our current CSS for .exp-section and .exp-label already implements that. But perhaps the user's current page doesn't show those styles because they haven't refreshed or maybe the classes aren't applied correctly in HTML. We need to confirm the HTML structure for experience cards matches the classes we styled.
-
-Looking at the user's pasted HTML (from earlier), they have:
-
-html
-<!-- JPMorganChase - Jira Automations -->
-<div class="exp-card" data-animate>
-  <div class="exp-card-top">
-    ...
-  </div>
-  <!-- Problem -->
-  <div class="exp-section">
-    <div class="exp-label">...</div>
-    <p class="exp-text">...</p>
-  </div>
-  <!-- Approach -->
-  <div class="exp-section">
-    ...
-  </div>
-  <!-- Results -->
-  ...
-  <!-- Learnings -->
-  <div class="exp-section exp-learning">
-    ...
-  </div>
-  <div class="tags">...</div>
-</div>
-That matches the classes. So if they refresh, they should see the new styles. But they may not have refreshed or they see it and want it to look more like the second image which might have a different color scheme, maybe more prominent icons, or card background.
-
-The second image's card has a header with role and date, then sections with bold labels and icons, and a "Key Learnings" highlighted in gold. That's exactly what we have. Perhaps the user wants the card to be more visually distinct, like with a border, shadow, maybe a different accent color.
-
-We could suggest improvements: make the card background more defined, add a subtle gradient, increase padding, add rounded corners, and maybe use a different font weight for labels.
-
-But the user asked "can you make the ui more appealing like the card i showed in the second image?" They are showing three images: first is the current output (plain text), second is a more styled card (with icons, colored labels, etc.), third is another card. They want the first one (which is their current experience section) to look like the second image.
-
-Their current CSS already has .exp-section styles. Maybe they haven't applied them? Or maybe they want the card to have a more polished look, like the second image which has a dark background with a subtle border, maybe a slight glow.
-
-I can provide an updated CSS that makes the experience cards look more like the second image: with a card background (like .exp-card itself), maybe a border, shadow, and better spacing. Also ensure the icons are visible (they have SVG). They might need to add a background to .exp-card as well.
-
-Let's propose an enhanced CSS for .exp-card and its children to match the polished card style. Also, the second image shows a "View Case Study" button at bottom, which they might not have but they have tags.
-
-I'll provide additional CSS to make the cards look more refined, with a subtle gradient background, rounded corners, inner padding, and maybe a hover effect. I'll also ensure the labels have a consistent color scheme.
-
-I'll write a response that gives them additional CSS to add to the bottom, or to replace the existing .exp-section styles, and also add styles for .exp-card to make it look like a card. The second image seems to have a dark card with a slight border and a header with role and date. They already have that.
-
-Maybe the issue is that the .exp-card class might not have a defined background or border. In their HTML, .exp-card is used but not styled in the CSS we see (except they have .exp-card in the timeline UI but that's different). They need to style .exp-card for the problem/approach/results cards. Currently, they might have no background, so it's just text on the page.
-
-We can add:
-
-css
-.exp-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.2s, border-color 0.2s;
-}
-.exp-card:hover {
-  border-color: rgba(122, 162, 255, 0.3);
-  transform: translateY(-2px);
-}
-That will give it the card look.
-
-Also, their .exp-section currently has a left border and background, which is good. We might adjust colors.
-
-I'll provide a comprehensive CSS update to make the experience cards look like the second image. I'll also suggest adding a subtle glow or shadow.
-
-Let's write a response.
-
-Got it! Your current experience section is displaying the content, but it's missing the card styling (background, border, padding, shadow) that makes the second image look polished. Let's fix that.
-
-What's Missing
-Your .exp-card class has no visual styling—it's just a plain <div> with text. The second image shows a card with:
-
-A subtle background (rgba(255,255,255,0.03))
-
-A thin border with slight glow
-
-Rounded corners (border-radius)
-
-Padding and spacing
-
-Hover effects (lift and border glow)
-
-Add This CSS to the Bottom of Your style.css
-Paste this after your existing .exp-section rules:
-
-css
-/* ============================================
-   ENHANCED EXPERIENCE CARD STYLING
-   (Matches the polished card look from the second image)
-   ============================================ */
-
-.exp-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(203, 222, 255, 0.14);
   border-radius: 16px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  backdrop-filter: blur(4px);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(122, 162, 255, 0.08), transparent 30%),
+    rgba(18, 20, 24, 0.94);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.exp-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(158, 196, 255, 0.8), rgba(158, 196, 255, 0));
+  opacity: 0.6;
 }
 
 .exp-card:hover {
-  border-color: rgba(122, 162, 255, 0.3);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  border-color: rgba(122, 162, 255, 0.38);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(122, 162, 255, 0.13), transparent 32%),
+    rgba(22, 25, 31, 0.98);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.32);
+  transform: translateY(-4px);
 }
 
-/* Make the card header more distinct */
 .exp-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-bottom: 1.3rem;
+}
+
+.exp-accent {
+  width: 4px;
+  min-height: 3.2rem;
+  border-radius: 999px;
+  box-shadow: 0 0 18px color-mix(in srgb, currentColor 40%, transparent);
+  flex: 0 0 auto;
+}
+
+.exp-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .exp-header h3 {
   margin: 0;
+  color: #f7f9fd;
   font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
 }
 
 .exp-role {
-  margin: 0.1rem 0 0;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
-}
-
-.exp-date {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.06);
-  padding: 0.2rem 0.7rem;
-  border-radius: 20px;
-  white-space: nowrap;
-}
-
-/* Section spacing inside card */
-.exp-section {
-  margin-bottom: 0.9rem;
-  padding: 0.6rem 0.9rem;
-  background: rgba(255, 255, 255, 0.025);
-  border-radius: 8px;
-  border-left: 3px solid rgba(255, 255, 255, 0.08);
-}
-
-.exp-label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #888;
-  margin-bottom: 2px;
-}
-
-.exp-label svg {
-  stroke: #888;
-  width: 14px;
-  height: 14px;
-}
-
-.exp-text {
+  margin: 0.3rem 0 0;
+  color: rgba(237, 243, 255, 0.68);
   font-size: 0.92rem;
-  line-height: 1.6;
+  font-weight: 500;
+}
+
+.exp-date {
+  flex: 0 0 auto;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(203, 222, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(237, 243, 255, 0.62);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.exp-section {
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(203, 222, 255, 0.07);
+  border-left: 3px solid rgba(122, 162, 255, 0.38);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.exp-section:hover {
+  border-left-color: #7aa2ff;
+  background: rgba(122, 162, 255, 0.06);
+}
+
+.exp-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+  color: #7aa2ff;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.exp-label svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex: 0 0 auto;
+}
+
+.exp-text {
   margin: 0;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(237, 243, 255, 0.74);
+  font-size: 0.9rem;
+  line-height: 1.58;
 }
 
-/* Highlight for Key Learning */
 .exp-learning {
-  border-left-color: #f59e0b;
-  background: rgba(245, 158, 11, 0.06);
-}
-
-.exp-learning .exp-label {
-  color: #f59e0b;
-}
-
-.exp-learning .exp-label svg {
-  stroke: #f59e0b;
-}
-
-.exp-learning-text {
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-/* Tags inside card */
-.exp-card .tags {
   margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.exp-card .tag {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.75rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 20px;
-}
-
-/* Responsive tweaks */
-@media (max-width: 640px) {
-  .exp-card {
-    padding: 1rem;
-  }
-  .exp-card-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-What This Does
-Element	Effect
-.exp-card	Adds a subtle dark card background, border, rounded corners, padding, and a hover lift effect with shadow
-.exp-card-top	Aligns company/role and date side‑by‑side with a chip‑style date badge
-.exp-section	Keeps the problem/approach/results blocks with left borders and subtle backgrounds
-.exp-learning	Gold border and background for the key learning section
-Tags	Soft pill‑style tags with matching dark theme
-After You Add This
-Save style.css (Ctrl + S)
-
-Hard refresh your browser (Ctrl + Shift + R or Cmd + Shift + R)
-
-Your experience cards will now look exactly like the polished card in your second image—with proper card containers, hover effects, and clean sectioning.
-
-Pro tip: If you want the card to have a more prominent glow like the second image, you can add a subtle box‑shadow or a radial gradient background to .exp-card—but the above will already give you a huge visual upgrade.
-
-Let me know if you need any tweaks! 🚀
-/* ============================================
-   EXPERIENCE CARD STYLING
-   (Polished card UI with Problem → Approach → Results → Learning)
-   ============================================ */
-
-/* Main card container */
-.exp-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  overflow: hidden;
-  position: relative;
-}
-
-.exp-card:hover {
-  border-color: rgba(122, 162, 255, 0.25);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-  transform: translateY(-4px);
-}
-
-/* Card header layout */
-.exp-card-top {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.2rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-}
-
-/* Colored accent bar on left */
-.exp-accent {
-  width: 4px;
-  height: 60px;
-  border-radius: 2px;
-  flex-shrink: 0;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.exp-card:hover .exp-accent {
-  opacity: 1;
-}
-
-/* Header content (company name + role) */
-.exp-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  flex: 1;
-  min-width: 0;
-}
-
-.exp-header h3 {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.02em;
-}
-
-.exp-role {
-  margin: 0.35rem 0 0;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
-}
-
-/* Date badge */
-.exp-date {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.06);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  white-space: nowrap;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  flex-shrink: 0;
-}
-
-/* Section blocks (Problem, Approach, Results, Learning) */
-.exp-section {
-  margin-bottom: 1.2rem;
-  padding: 0.9rem 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 10px;
-  border-left: 3px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.25s ease;
-}
-
-.exp-section:last-of-type:not(.exp-learning) {
-  margin-bottom: 1.5rem;
-}
-
-.exp-section:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-left-color: rgba(255, 255, 255, 0.15);
-}
-
-/* Section label with icon */
-.exp-label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 0.5rem;
-  transition: color 0.25s ease;
-}
-
-.exp-label svg {
-  width: 14px;
-  height: 14px;
-  stroke: rgba(255, 255, 255, 0.6);
-  stroke-width: 2;
-  flex-shrink: 0;
-  transition: stroke 0.25s ease;
-}
-
-.exp-section:hover .exp-label {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.exp-section:hover .exp-label svg {
-  stroke: rgba(255, 255, 255, 0.8);
-}
-
-/* Section text content */
-.exp-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* ===== KEY LEARNING SECTION (Gold Highlight) ===== */
-.exp-learning {
+  border-color: rgba(245, 158, 11, 0.22);
   border-left-color: #f59e0b;
   background: rgba(245, 158, 11, 0.08);
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .exp-learning:hover {
-  background: rgba(245, 158, 11, 0.12);
   border-left-color: #fbbf24;
+  background: rgba(245, 158, 11, 0.12);
 }
 
 .exp-learning .exp-label {
-  color: #f59e0b;
-}
-
-.exp-learning .exp-label svg {
-  stroke: #f59e0b;
+  color: #fbbf24;
 }
 
 .exp-learning-text {
+  color: rgba(255, 246, 222, 0.86);
   font-style: italic;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 500;
 }
 
-/* ===== TAGS SECTION ===== */
 .exp-card .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.75rem;
+  gap: 0.45rem;
+  margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(203, 222, 255, 0.09);
 }
 
 .exp-card .tag {
   display: inline-flex;
   align-items: center;
-  font-size: 0.75rem;
+  min-height: 1.6rem;
+  padding: 0.23rem 0.55rem;
+  border: 1px solid rgba(203, 222, 255, 0.09);
+  border-radius: 6px;
+  background: rgba(122, 162, 255, 0.12);
+  color: rgba(237, 243, 255, 0.82);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
   font-weight: 600;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.7);
-  transition: all 0.2s ease;
-  letter-spacing: 0.02em;
 }
 
-.exp-card .tag:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* ===== EXPERIENCE LIST CONTAINER ===== */
-.experience-list {
+/* Retain the portfolio's horizontally scrollable project row. */
+.project-list {
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  overflow-x: auto;
+  gap: 1rem;
+  align-items: stretch;
+  perspective: 1000px;
+  scroll-snap-type: x proximity;
+  scrollbar-color: #7aa2ff transparent;
+  scrollbar-width: thin;
+  padding-bottom: 0.75rem;
 }
 
-/* ===== RESPONSIVE TWEAKS ===== */
-@media (max-width: 768px) {
+.project-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-list::-webkit-scrollbar-thumb {
+  background: #7aa2ff;
+  border-radius: 999px;
+}
+
+.project-card {
+  flex: 0 0 clamp(280px, 70vw, 560px);
+  scroll-snap-align: start;
+}
+
+@media (max-width: 640px) {
+  #experience {
+    padding: 3.5rem 0;
+  }
+
   .exp-card {
-    padding: 1.2rem;
-    margin-bottom: 1.2rem;
+    padding: 1.1rem;
+    border-radius: 14px;
   }
 
   .exp-card-top {
-    flex-direction: column;
-    gap: 0.8rem;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .exp-header {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
   }
 
   .exp-header h3 {
     font-size: 1.1rem;
   }
 
-  .exp-date {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.75rem;
-  }
-
-  .exp-accent {
-    height: 50px;
-  }
-
   .exp-section {
-    padding: 0.8rem 0.9rem;
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .exp-card {
-    padding: 1rem;
-    border-radius: 14px;
-  }
-
-  .exp-header h3 {
-    font-size: 1rem;
-  }
-
-  .exp-role {
-    font-size: 0.9rem;
+    padding: 0.75rem 0.85rem;
   }
 
   .exp-text {
-    font-size: 0.9rem;
-  }
-
-  .exp-accent {
-    height: 45px;
-  }
-
-  .exp-card .tags {
-    gap: 0.5rem;
-  }
-
-  .exp-card .tag {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.65rem;
-  }
-}
-/* ============================================
-   EXPERIENCE CARD STYLING
-   (Polished card UI with Problem → Approach → Results → Learning)
-   ============================================ */
-
-/* Main card container */
-.exp-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  overflow: hidden;
-  position: relative;
-}
-
-.exp-card:hover {
-  border-color: rgba(122, 162, 255, 0.25);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-  transform: translateY(-4px);
-}
-
-/* Card header layout */
-.exp-card-top {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.2rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-}
-
-/* Colored accent bar on left */
-.exp-accent {
-  width: 4px;
-  height: 60px;
-  border-radius: 2px;
-  flex-shrink: 0;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.exp-card:hover .exp-accent {
-  opacity: 1;
-}
-
-/* Header content (company name + role) */
-.exp-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  flex: 1;
-  min-width: 0;
-}
-
-.exp-header h3 {
-  margin: 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.02em;
-}
-
-.exp-role {
-  margin: 0.35rem 0 0;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
-}
-
-/* Date badge */
-.exp-date {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.06);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  white-space: nowrap;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  flex-shrink: 0;
-}
-
-/* Section blocks (Problem, Approach, Results, Learning) */
-.exp-section {
-  margin-bottom: 1.2rem;
-  padding: 0.9rem 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 10px;
-  border-left: 3px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.25s ease;
-}
-
-.exp-section:last-of-type:not(.exp-learning) {
-  margin-bottom: 1.5rem;
-}
-
-.exp-section:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-left-color: rgba(255, 255, 255, 0.15);
-}
-
-/* Section label with icon */
-.exp-label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 0.5rem;
-  transition: color 0.25s ease;
-}
-
-.exp-label svg {
-  width: 14px;
-  height: 14px;
-  stroke: rgba(255, 255, 255, 0.6);
-  stroke-width: 2;
-  flex-shrink: 0;
-  transition: stroke 0.25s ease;
-}
-
-.exp-section:hover .exp-label {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.exp-section:hover .exp-label svg {
-  stroke: rgba(255, 255, 255, 0.8);
-}
-
-/* Section text content */
-.exp-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* ===== KEY LEARNING SECTION (Gold Highlight) ===== */
-.exp-learning {
-  border-left-color: #f59e0b;
-  background: rgba(245, 158, 11, 0.08);
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.exp-learning:hover {
-  background: rgba(245, 158, 11, 0.12);
-  border-left-color: #fbbf24;
-}
-
-.exp-learning .exp-label {
-  color: #f59e0b;
-}
-
-.exp-learning .exp-label svg {
-  stroke: #f59e0b;
-}
-
-.exp-learning-text {
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 500;
-}
-
-/* ===== TAGS SECTION ===== */
-.exp-card .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.75rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.exp-card .tag {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.7);
-  transition: all 0.2s ease;
-  letter-spacing: 0.02em;
-}
-
-.exp-card .tag:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* ===== EXPERIENCE LIST CONTAINER ===== */
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-/* ===== RESPONSIVE TWEAKS ===== */
-@media (max-width: 768px) {
-  .exp-card {
-    padding: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .exp-card-top {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .exp-header {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .exp-header h3 {
-    font-size: 1.1rem;
-  }
-
-  .exp-date {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.75rem;
-  }
-
-  .exp-accent {
-    height: 50px;
-  }
-
-  .exp-section {
-    padding: 0.8rem 0.9rem;
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .exp-card {
-    padding: 1rem;
-    border-radius: 14px;
-  }
-
-  .exp-header h3 {
-    font-size: 1rem;
-  }
-
-  .exp-role {
-    font-size: 0.9rem;
-  }
-
-  .exp-text {
-    font-size: 0.9rem;
-  }
-
-  .exp-accent {
-    height: 45px;
-  }
-
-  .exp-card .tags {
-    gap: 0.5rem;
-  }
-
-  .exp-card .tag {
-    font-size: 0.7rem;
-    padding: 0.3rem 0.65rem;
+    font-size: 0.87rem;
   }
 }
