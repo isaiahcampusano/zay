@@ -844,8 +844,10 @@ select {
   line-height: 1.02;
 }
 
+html.dialog-open,
 body.dialog-open {
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 .experience-preview-grid {
@@ -982,6 +984,7 @@ body.dialog-open {
   margin: auto;
   padding: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
   border: 1px solid color-mix(in srgb, var(--experience-accent) 36%, rgba(203, 222, 255, 0.16));
   border-radius: 16px;
   background: #121418;
