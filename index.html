@@ -522,6 +522,7 @@
 
         lastDialogTrigger = trigger;
         dialog.showModal();
+        document.documentElement.classList.add("dialog-open");
         document.body.classList.add("dialog-open");
 
         window.requestAnimationFrame(() => {
@@ -544,6 +545,7 @@
       });
 
       dialog.addEventListener("close", () => {
+        document.documentElement.classList.remove("dialog-open");
         document.body.classList.remove("dialog-open");
 
         const triggerToRestore = lastDialogTrigger;
