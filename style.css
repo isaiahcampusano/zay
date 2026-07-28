@@ -393,9 +393,24 @@ select {
 }
 
 .project-list {
-  grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
   align-items: stretch;
   perspective: 1000px;
+  scroll-snap-type: x proximity;
+  scrollbar-color: #7aa2ff transparent;
+  scrollbar-width: thin;
+  padding-bottom: 0.75rem;
+}
+
+.project-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-list::-webkit-scrollbar-thumb {
+  background: #7aa2ff;
+  border-radius: 999px;
 }
 
 .experience-card {
@@ -594,7 +609,9 @@ select {
 }
 
 .project-card {
+  flex: 0 0 clamp(280px, 70vw, 560px);
   min-height: 340px;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -878,8 +895,7 @@ select {
     display: none;
   }
 
-  .experience-list,
-  .project-list {
+  .experience-list {
     grid-template-columns: 1fr;
   }
 
