@@ -4,276 +4,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b0d10">
-  <meta name="color-scheme" content="dark">
-
-  <title>Isaiah Campusano — Decisions under constraints</title>
-  <meta
-    name="description"
-    content="Isaiah Campusano is a UGA student exploring decisions under constraints through financial interfaces, game-playing agents, and short notes."
-  >
+  <title>Isaiah Campusano</title>
+  <meta name="description" content="Every optimization leaves something behind.">
   <link rel="canonical" href="https://isaiahcampusano.github.io/zay/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://isaiahcampusano.github.io/zay/">
-  <meta property="og:title" content="Isaiah Campusano — Decisions under constraints">
-  <meta
-    property="og:description"
-    content="A calling card about rules, incentives, interfaces, and what gets optimized along the way."
-  >
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Isaiah Campusano — Decisions under constraints">
-  <meta
-    name="twitter:description"
-    content="A calling card about rules, incentives, interfaces, and what gets optimized along the way."
-  >
-
+  <meta property="og:title" content="Isaiah Campusano">
+  <meta property="og:description" content="Every optimization leaves something behind.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="style.css?v=20260729-calling-card">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas: #0b0d10;
+      --ink: #f1eee8;
+      --muted: #a2a8b1;
+      --accent: #8fb5ff;
+      --mono: "IBM Plex Mono", monospace;
+      --sans: "Manrope", sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: var(--sans);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+    .container {
+      max-width: 36rem;
+    }
+    .emblem {
+      display: block;
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 2.5rem;
+      object-fit: cover;
+      border-radius: 50%;
+      filter: grayscale(0.4) contrast(1.1);
+      border: 2px solid rgba(241,238,232,0.12);
+    }
+    .fragment {
+      font-family: var(--mono);
+      font-size: clamp(1.8rem, 5.5vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+    .second-line {
+      color: var(--muted);
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      line-height: 1.7;
+      margin-bottom: 2.75rem;
+    }
+    .paper-train {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .paper-train a {
+      color: var(--ink);
+      text-decoration-color: rgba(143,181,255,0.5);
+      text-underline-offset: 0.25em;
+    }
+    .paper-train a:hover {
+      color: var(--accent);
+    }
+    .sub-links {
+      margin-top: 0.8rem;
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      font-size: 0.72rem;
+    }
+    .sub-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .sub-links a:hover { color: var(--ink); }
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <main class="container">
+    <!-- Replace this src with your own emblem/image -->
+    <img class="emblem" src="https://images.unsplash.com/photo-1590497015425-5f7c1dfc3f06?w=300&h=300&fit=crop&crop=face" alt="Marble statue" loading="eager">
 
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="wordmark" href="#top" aria-label="Isaiah Campusano, back to top">
-        Isaiah Campusano
-      </a>
+    <h1 class="fragment">The constraint is the only<br>honest part.</h1>
+    <p class="second-line">
+      I build interfaces and agents that make the hidden rules visible.
+    </p>
 
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#proof">proof</a>
-        <a href="#note">note</a>
-        <a href="#interests">interests</a>
-        <a href="#contact">write</a>
-        <a href="assets/Isaiah-Campusano-Resume.pdf" target="_blank" rel="noreferrer">
-          résumé <span aria-hidden="true">↗</span>
-        </a>
-      </nav>
+    <div class="paper-train">
+      <p>If that sounds like your kind of game,<br><a href="mailto:inc67651@uga.edu">inc67651@uga.edu</a></p>
+      <div class="sub-links">
+        <a href="assets/Isaiah-Campusano-Resume.pdf" target="_blank" rel="noreferrer">résumé</a>
+        <a href="https://github.com/isaiahcampusano" target="_blank" rel="noreferrer">github</a>
+        <a href="https://www.linkedin.com/in/isaiah-campusano-802535266/" target="_blank" rel="noreferrer">linkedin</a>
+      </div>
     </div>
-  </header>
-
-  <main id="main-content">
-    <section id="top" class="hero" aria-labelledby="hero-title">
-      <div class="shell section-grid">
-        <p class="rail-label">00 / thesis</p>
-
-        <div class="hero-copy">
-          <p class="eyebrow">UGA student</p>
-          <h1 id="hero-title">I think about decisions under constraints.</h1>
-          <p class="hero-summary">
-            I’m interested in how rules, incentives, and interfaces change the choices
-            available to people—and what gets optimized along the way.
-          </p>
-          <a class="direction-link" href="#proof">
-            Follow the evidence <span aria-hidden="true">↓</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="proof" class="content-section" aria-labelledby="proof-title">
-      <div class="shell section-grid">
-        <p class="rail-label">01 / proof</p>
-
-        <div class="section-content">
-          <header class="section-header">
-            <p class="eyebrow">Selected work</p>
-            <h2 id="proof-title">The question changes. The pattern doesn’t.</h2>
-            <p>
-              Start with the objective. Find the constraint. Then see what the system
-              makes possible.
-            </p>
-          </header>
-
-          <article class="proof-entry">
-            <p class="entry-index">01A / financial interfaces / 2025</p>
-            <h3>Two interfaces. One question.</h3>
-            <p class="entry-copy">
-              Does a simpler navigation structure reduce friction in everyday money
-              tasks? I built an unofficial front-end prototype with a four-tab control
-              and a three-tab alternative, covering send money, bill pay, transfers,
-              and transaction details.
-            </p>
-
-            <dl class="project-facts">
-              <div>
-                <dt>Control</dt>
-                <dd>Four tabs</dd>
-              </div>
-              <div>
-                <dt>Variant</dt>
-                <dd>Three tabs</dd>
-              </div>
-              <div>
-                <dt>Stack</dt>
-                <dd>Vite + vanilla JS</dd>
-              </div>
-            </dl>
-
-            <div class="entry-links" aria-label="Chase Mobile project links">
-              <a href="https://isaiahcampusano.github.io/chasemobile/" target="_blank" rel="noreferrer">
-                Open prototype <span aria-hidden="true">↗</span>
-              </a>
-              <a href="https://github.com/isaiahcampusano/chasemobile" target="_blank" rel="noreferrer">
-                Read source <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="proof-entry">
-            <p class="entry-index">01B / game trees / 2026</p>
-            <h3>Every move exposes the objective.</h3>
-            <p class="entry-copy">
-              I built a terminal chess agent using python-chess for legal move
-              generation, plus custom minimax search, alpha-beta pruning, and a
-              deliberately simple material evaluation. Its choices are only as good as
-              the objective it can see.
-            </p>
-
-            <dl class="project-facts">
-              <div>
-                <dt>Search</dt>
-                <dd>Minimax</dd>
-              </div>
-              <div>
-                <dt>Pruning</dt>
-                <dd>Alpha-beta</dd>
-              </div>
-              <div>
-                <dt>Evaluation</dt>
-                <dd>Material count</dd>
-              </div>
-            </dl>
-
-            <div class="entry-links" aria-label="Chess Engine project links">
-              <a href="https://github.com/isaiahcampusano/chess-engine" target="_blank" rel="noreferrer">
-                Read source <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </article>
-
-          <aside class="work-context" aria-label="Professional context">
-            <p class="entry-index">01C / systems in practice</p>
-            <p>
-              Previously: product operations at JPMorganChase and mobility research
-              with Georgia Tech ISyE.
-            </p>
-            <div class="entry-links">
-              <a href="assets/Isaiah-Campusano-Resume.pdf" target="_blank" rel="noreferrer">
-                Read résumé <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/isaiah-campusano-802535266/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="note" class="content-section" aria-labelledby="note-title">
-      <div class="shell section-grid">
-        <p class="rail-label">02 / note</p>
-
-        <article class="section-content note">
-          <p class="eyebrow">Working note / short form</p>
-          <h2 id="note-title">The possession isn’t the game.</h2>
-          <p class="note-copy">
-            A JEPA is like watching basketball from the sideline: learning spacing,
-            movement, and the structure of play by predicting hidden representations,
-            without reconstructing every pixel or being rewarded for choosing the next
-            move. A base language model, by contrast, is typically trained to predict
-            the next token; an instruction-following model may later be tuned on
-            demonstrations and human-preference rewards. Neither objective is the game
-            itself. The best-looking play for one possession can still be wrong for the
-            final score. I keep returning to that gap: what a system optimizes now
-            versus what we actually care about.
-          </p>
-          <p class="note-sources">
-            Read:
-            <a href="https://arxiv.org/abs/2301.08243" target="_blank" rel="noreferrer">
-              I-JEPA
-            </a>
-            <span aria-hidden="true">/</span>
-            <a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noreferrer">
-              InstructGPT
-            </a>
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="interests" class="content-section" aria-labelledby="interests-title">
-      <div class="shell section-grid">
-        <p class="rail-label">03 / interests</p>
-
-        <div class="section-content">
-          <header class="section-header compact-header">
-            <p class="eyebrow">A partial map</p>
-            <h2 id="interests-title">Things I return to.</h2>
-          </header>
-
-          <ul class="interest-list" aria-label="Interests">
-            <li>Decision Theory</li>
-            <li>Financial Interfaces</li>
-            <li>Game Trees</li>
-            <li>World Models</li>
-            <li>SEC Football</li>
-            <li>PC Hardware</li>
-            <li>House Music</li>
-            <li>The Social Network (2010)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="content-section contact-section" aria-labelledby="contact-title">
-      <div class="shell section-grid">
-        <p class="rail-label">04 / write</p>
-
-        <div class="section-content">
-          <p class="eyebrow">The only call to action</p>
-          <h2 id="contact-title">Write to me.</h2>
-          <p class="contact-prompt">
-            Tell me about a model with the wrong objective, a financial product that
-            hides its rules, a house track I should hear, or your case for the SEC.
-          </p>
-
-          <a class="email-link" href="mailto:inc67651@uga.edu">inc67651@uga.edu</a>
-
-          <nav class="contact-links" aria-label="Elsewhere">
-            <a
-              href="https://www.linkedin.com/in/isaiah-campusano-802535266/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn <span aria-hidden="true">↗</span>
-            </a>
-            <a href="https://github.com/isaiahcampusano" target="_blank" rel="noreferrer">
-              GitHub <span aria-hidden="true">↗</span>
-            </a>
-            <a href="assets/Isaiah-Campusano-Resume.pdf" target="_blank" rel="noreferrer">
-              Résumé <span aria-hidden="true">↗</span>
-            </a>
-          </nav>
-        </div>
-      </div>
-    </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <p>Isaiah Campusano / UGA / 2026</p>
-      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
-    </div>
-  </footer>
 </body>
 </html>
