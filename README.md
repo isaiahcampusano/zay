@@ -1,7 +1,4 @@
-# Zay
-
-An evidence-backed calling card for Isaiah Campusano, centered on decisions under
-constraints across financial interfaces, game-playing agents, and short notes.
+#zay
 
 Live: https://isaiahcampusano.github.io/zay/
 
